@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant-TW" xml:lang="zh-hant-TW">
+<head>
+<meta charset="UTF-8">
+<title>Bopomofo Test Case 03</title>
+<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+<style>
+
+html {
+	font-size: 36px;
+}
+
+
+
+@font-face { 
+	font-family: TestFont; 
+	src: url(bpmfgpos.otf); 
+}
+
+p {
+	text-align: justify;
+	text-justify: ideographic;
+}
+
+ruby {
+	-webkit-ruby-position: inter-character;
+	-moz-ruby-position: inter-character;
+	ruby-position: inter-character;
+/* in this case, use OpenType feature 'vkrn' instead of 'mark' */
+	font-feature-settings: "vkrn";
+	-moz-font-feature-settings: "vkrn=1";
+	-ms-font-feature-settings: "vkrn";
+	-webkit-font-feature-settings: "vkrn";
+	-o-font-feature-settings: "vkrn";
+}
+
+rt{
+font-size: 28%;
+letter-spacing: 0;
+ruby-align: center;
+-moz-ruby-align: center;
+-ms-ruby-align: center;
+-webkit-ruby-align: center;
+-o-ruby-align: center;
+/* it seems ruby-align properties doesn't implied, text-align instead */
+text-align: center;
+
+}
+
+.description {
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 3px;
+	font-family: serif;
+	text-align: center;
+}
+
+
+
+</style>
+</head>
+
+<body>
+	<p class="description">說明：文字橫排、注音直排、注音置於右側字間，使用<a href="https://www.facebook.com/but.ko.5">But Ko</a>的<a href="bpmfgpos.otf">bpmfgpos.otf</a>調整調號位置。<br/>
+請安裝支援ruby-position: inter-character的<a href="http://nightly.webkit.org/">Webkit Nightly Build</a>測試<br/><br/>
+Text in horizontal writing and Bopomofo in vertical writing with ruby-position: inter-character, Bopomofo  embedded subsetted font with GPOS feature to adjust tone marks' position.<br/>
+Please test on <a href="http://nightly.webkit.org/">Webkit Nightly Build</a> that supports ruby-position: inter-character.<br/><br/>
+<a href="http://binb.tw/bopomofo/case01/">Case01</a> | <a href="http://binb.tw/bopomofo/case02/">Case02</a></p>
+
+<h1>
+<ruby>一<rt>ㄧ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt></ruby></h1>
+
+<p><ruby>天<rt>ㄊ一ㄢ</rt>亮<rt>ㄌ一ㄤˋ</rt>了<rt>˙ㄌㄜ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>我<rt>ㄨㄛˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt></ruby></p>
+
+<? to avoid ruby marked on punctuations, blank rt added. ?>
+
+<p><ruby>天<rt>ㄊ一ㄢ</rt>亮<rt>ㄌ一ㄤˋ</rt>了<rt>˙ㄌㄜ</rt>，<rt></rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>。<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>。<rt></rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>，<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>。<rt></rt>我<rt>ㄨㄛˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt>，<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt></ruby>。</p>
+
+<p class="description">測試狀況回報<br/>report here</p>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'bopomofotest';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</body></html>

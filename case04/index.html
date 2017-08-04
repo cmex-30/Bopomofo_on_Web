@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-hant-TW" xml:lang="zh-hant-TW">
+<head>
+<meta charset="UTF-8">
+<title>Bopomofo Test Case 02</title>
+<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+<style>
+
+html {
+	font-family: TestFont, serif;
+	font-size: 36px;
+}
+
+.vert {
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+  	writing-mode: vertical-rl;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+@font-face { 
+	font-family: TestFont; 
+	src: url(bpmfgpos.otf); 
+}
+
+p {
+	text-align: justify;
+	text-justify: ideographic;
+/* in this case, use OpenType feature 'vkrn' instead of 'mark' */
+	font-feature-settings: "vkrn";
+	-moz-font-feature-settings: "vkrn=1";
+	-ms-font-feature-settings: "vkrn";
+	-webkit-font-feature-settings: "vkrn";
+	-o-font-feature-settings: "vkrn";
+}
+
+
+.description {
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 3px;
+	font-family: serif;
+	text-align: center;
+}
+
+
+
+</style>
+</head>
+
+<body>
+	<p class="description">說明：注音置於內文直排，使用<a href="https://www.facebook.com/but.ko.5">But Ko</a>的<a href="bpmfgpos.otf">bpmfgpos.otf</a>調整調號位置。
+<br/><br/>
+In-line bopomofo in vertical writing, embedded subsetted font with GPOS feature to adjust tone marks' position.</p>
+
+<div class="vert">
+
+
+<p>這個字念ㄒㄧㄝˋ，不唸作ㄒㄧˊ。ㄨㄛˇ吃飽˙ㄌㄜ</p>
+</div>
+<p class="description">測試狀況回報<br/>report here</p>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'bopomofotest';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</body></html>
