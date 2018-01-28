@@ -1,53 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant-TW" xml:lang="zh-hant-TW">
+<!DOCTYPE html>
+<!--
+CSS Vertical Bopomofo Test
+bpmftest_vertical.htm
+
+Kevin Hsieh
+27 January 2018
+-->
+<html lang="zh-TW" style="writing-mode: vertical-rl">
 <head>
-<meta charset="UTF-8"><title>Bopomofo Test Case 02</title>
-<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+<title>
+	CSS Inter-character Bopomofo Test
+</title>
+<meta charset="UTF-8">
 <style>
-
-html {
-	font-family:  Testfont,serif;
-	font-size: 36px;
+	
+body {
+  font-size: 50px;
 }
-
-.vert {
-	-moz-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	-o-writing-mode: vertical-rl;
-	-webkit-writing-mode: vertical-rl;
-  	writing-mode: vertical-rl;
-  	margin-left: auto;
-  	margin-right: auto;
+rt {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 30%;
+  font-feature-settings: "vkrn";
 }
-
-@font-face { 
-	font-family: TestFont; 
-	src: url(bpmfgpos.otf); 
-}
-
-p {
-	text-align: justify;
-	text-justify: ideographic;
+@font-face {
+  font-family: BopomofoGPOS;
+  src: url("bpmfgpos.otf");
 }
 
 ruby {
-/* in this case, use OpenType feature 'vkrn' instead of 'mark' */
-	font-feature-settings: "vkrn";
-	-moz-font-feature-settings: "vkrn=1";
-	-ms-font-feature-settings: "vkrn";
-	-webkit-font-feature-settings: "vkrn";
-	-o-font-feature-settings: "vkrn";
-}
-
-rt{
-font-size: 28%;
-letter-spacing: 0;
-ruby-align: center;
-/* it seems ruby-align properties doesn't implied, text-align instead */
-text-align: center;
-text-orientation: upright;
-
-
+	font-family: BopomofoGPOS, serif;
 }
 
 .description {
@@ -59,20 +41,19 @@ text-orientation: upright;
 	text-align: center;
 }
 
+</style>
+
+
+
 
 
 </style>
 </head>
 
 <body>
-	<p class="description">說明：文字直排、注音直排，使用<a href="https://www.facebook.com/but.ko.5">But Ko</a>的<a href="bpmfgpos.otf">bpmfgpos.otf</a>調整調號位置。<br/>
-若Firefox無法顯示直排，請安裝<a href="https://nightly.mozilla.org">Nightly版本</a>，透過<a href="about:config">about:config</a>將layout.css.vertical-text.enabled設定為True.<br/>
-Chrome可安裝<a href="https://www.google.com.tw/chrome/browser/canary.html">Chrome Canary</a>測試。<br/><br/>
-Text and Bopomofo in vertical writing, embedded subsetted font with GPOS feature to adjust tone marks' position.<br/>
-If your Firefox cannot show vertical text, please download <a href="https://nightly.mozilla.org">nightly build</a>, set 'layout.css.vertical-text.enabled' value to true.<br/>
-On Google Chrome, you can try <a href="https://www.google.com.tw/chrome/browser/canary.html">Chrome Canary</a>.<br/><br/>
-<a href="http://binb.tw/bopomofo/case01/">Case01</a> | <a href="http://binb.tw/bopomofo/case03/">Case03</a></p>
-<div class="vert">
+	<p class="description">說明：文字直排、注音直排，使用<a href="https://www.facebook.com/but.ko.5">But Ko</a>的<a href="bpmfgpos.otf">bpmfgpos.otf</a>調整調號位置。<br/>二零一八年一月二十八日，透過Kevin Hsieh提供<a href="https://github.com/jfkthame">jfkthame</a>修改的<a href="https://github.com/harfbuzz/harfbuzz/issues/532">新版字體</a>。<br/>請使用<a href="https://www.mozilla.org/firefox/new/">Firefox 58</a>以上瀏覽器進行測試。</p>
+	
+
 <h1>
 <ruby>一<rt>ㄧ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt></ruby></h1>
 
@@ -83,7 +64,7 @@ On Google Chrome, you can try <a href="https://www.google.com.tw/chrome/browser/
 <? to avoid ruby marked on punctuations, blank rt added. ?>
 
 <p><ruby>天<rt>ㄊ一ㄢ</rt>亮<rt>ㄌ一ㄤˋ</rt>了<rt>˙ㄌㄜ</rt>，<rt></rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>。<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>。<rt></rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>，<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>。<rt></rt>我<rt>ㄨㄛˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt>，<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt></ruby>。</p>
-</div>
+
 <p class="description">測試狀況回報<br/>report here</p>
 
 <div id="disqus_thread"></div>
