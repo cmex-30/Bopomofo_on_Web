@@ -9,3 +9,7 @@ Test Browser ruby position: inter-charater implement and OpenType feature to tun
 ## 3/22更新字體
 
 詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
+
+## 其他測試與相容性
+
+相容於[LibreOffice](https://github.com/harfbuzz/harfbuzz/issues/532#issuecomment-375284467)
