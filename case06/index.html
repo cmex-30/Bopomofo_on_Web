@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+CSS Vertical Bopomofo Test
+bpmftest_vertical.htm
+
+Kevin Hsieh
+27 January 2018
+
+Bobby Tung 
+
+22 March 2018
+-->
+<html lang="zh-TW" style="writing-mode: vertical-rl">
+<head>
+<title>
+	CSS Inter-character Bopomofo Test
+</title>
+<meta charset="UTF-8">
+<style>
+	
+body {
+  font-size: 50px;
+}
+rt {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 30%;
+  font-feature-settings: "vert";
+  text-align: center;
+}
+@font-face {
+  font-family: BopomofoGPOS;
+  src: url("bpmfgpos_4.otf");
+}
+
+ruby {
+	font-family: BopomofoGPOS, serif;
+}
+
+.description {
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 3px;
+	font-family: serif;
+	
+}
+
+</style>
+
+
+
+
+
+</style>
+</head>
+
+<body>
+	<p class="description">說明：文字直排、注音直排，Dr. Ken Lunde的建議，使用OpenType GPOS 'vert"功能，由<a href="https://www.facebook.com/but.ko.5">But Ko</a>提供新版測試字體。<br/>請使用<a href="https://www.mozilla.org/firefox/new/">Firefox 58</a>以上瀏覽器進行測試。</p>
+	
+
+<h1>
+<ruby>一<rt>ㄧ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt></ruby></h1>
+
+
+
+<p><ruby>天<rt>ㄊ一ㄢ</rt>亮<rt>ㄌ一ㄤˋ</rt>了<rt>˙ㄌㄜ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>我<rt>ㄨㄛˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt></ruby></p>
+
+<? to avoid ruby marked on punctuations, blank rt added. ?>
+
+<p><ruby>天<rt>ㄊ一ㄢ</rt>亮<rt>ㄌ一ㄤˋ</rt>了<rt>˙ㄌㄜ</rt>，<rt></rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>。<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>來<rt>ㄌㄞˊ</rt>了<rt>˙ㄌㄜ</rt>。<rt></rt>我<rt>ㄨㄛˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>，<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>起<rt>ㄑㄧˇ</rt>得<rt>˙ㄉㄜ</rt>早<rt>ㄗㄠˇ</rt>。<rt></rt>我<rt>ㄨㄛˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt>，<rt></rt>太<rt>ㄊㄞˋ</rt>陽<rt>ㄧㄤˊ</rt>也<rt>一ㄝˇ</rt>天<rt>ㄊㄧㄢ</rt>天<rt>ㄊㄧㄢ</rt>早<rt>ㄗㄠˇ</rt>起<rt>ㄑㄧˇ</rt></ruby>。</p>
+
+
+
+
+</body></html>
