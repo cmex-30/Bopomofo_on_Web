@@ -52,9 +52,9 @@ rt {
 }
 
 rtc {
-  writing-mode: vertical-rl;
   font-size: 30%;
   text-align: center;
+  writing-mode: vertical-rl;
   text-orientation: upright;
   display: inline-block;
   vertical-align: middle;
@@ -68,6 +68,11 @@ rtc {
   -webkit-font-feature-settings: "ruby";
   font-feature-settings: "ruby";
 }
+
+.inter {
+	ruby-position: inter-character;
+}
+
 
 </style>
 
@@ -117,8 +122,11 @@ rtc {
 
 <div class="inter">
 
-<p>這是一則火<rtc>ㄏㄨㄛˇ</rtc>星<rtc>ㄒㄧㄥ</rtc>文<rtc>ㄨㄣˊ</rtc></p>
-<p>接下來念第<rtc>ㄉㆤ˫</rtc>一<rtc>ㄧㆵ</rtc>條<rtc>ㄉㄧㄠˊ</rtc></p>
+<p>這是一則<ruby>火<rtc>ㄏㄨㄛˇ</rtc></ruby><ruby>星<rtc>ㄒㄧㄥ</rtc></ruby><ruby>文<rtc>ㄨㄣˊ</rtc></ruby></p>
+<p>接下來念<ruby>第<rtc>ㄉㆤ˫</rtc></ruby><ruby>一<rtc>ㄧㆵ</rtc></ruby><ruby>條<rtc>ㄉㄧㄠˊ</rtc></ruby></p>
 
 </div>
+
+
+
 </body></html>
