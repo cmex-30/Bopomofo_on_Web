@@ -62,6 +62,13 @@ rtc {
   white-space: nowrap;
 }
 
+.ruby {
+  font-variant-east-asian: ruby;
+  -moz-font-feature-settings: "ruby";
+  -webkit-font-feature-settings: "ruby";
+  font-feature-settings: "ruby";
+}
+
 </style>
 
 </head>
@@ -88,7 +95,16 @@ rtc {
 <p>這是一則<ruby>火<rt>ㄏㄨㄛˇ</rt></ruby><ruby>星<rt>ㄒㄧㄥ</rt></ruby><ruby>文<rt>ㄨㄣˊ</rt></ruby></p>
 <p>接下來念<ruby>第<rt>ㄉㆤ˫</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>條<rt>ㄉㄧㄠˊ</rt></ruby></p>
 
-<h2>Case 4, vertical writing Bopomofo in ruby</h2>
+<h2>Case 4, horizontal writing Bopomofo in ruby with font feature 'ruby'</h2>
+
+<div class="ruby">
+
+<p>這是一則<ruby>火<rt>ㄏㄨㄛˇ</rt></ruby><ruby>星<rt>ㄒㄧㄥ</rt></ruby><ruby>文<rt>ㄨㄣˊ</rt></ruby></p>
+<p>接下來念<ruby>第<rt>ㄉㆤ˫</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>條<rt>ㄉㄧㄠˊ</rt></ruby></p>
+
+</div>
+
+<h2>Case 5, vertical writing Bopomofo in ruby</h2>
 
 <div class="vert">
 	
@@ -97,7 +113,7 @@ rtc {
 
 </div>
 
-<h2>Case 5, horizontal writing Bopomofo in inter-character ruby</h2>
+<h2>Case 6, horizontal writing Bopomofo in inter-character ruby</h2>
 
 <div class="inter">
 
