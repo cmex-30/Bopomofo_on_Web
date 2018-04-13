@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+CSS Vertical Bopomofo Test
+bpmftest_vertical.htm
+
+Kevin Hsieh
+27 January 2018
+
+Bobby Tung 
+
+13 April 2018
+-->
+<html lang="zh-TW">
+<head>
+<title>
+	CSS Bopomofo Test
+</title>
+<meta charset="UTF-8">
+<style>
+
+@font-face {
+  font-family: BopomofoGPOS;
+  src: url("BopomofoGPOS.otf");
+}
+
+body {
+  font-family: BopomofoGPOS,serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 32px;
+}
+
+.vert {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: 20rem;
+}
+
+rt {
+  font-size: 30%;
+  text-align: center;
+
+}
+
+rtc {
+  writing-mode: vertical-rl;
+  font-size: 30%;
+  text-align: center;
+  text-orientation: upright;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+  white-space: nowrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Case 1, horizontal writing, inline Bopomofo</h2>
+
+<p>這是一則ㄏㄨㄛˇ ㄒㄧㄥ ㄨㄣˊ</p>
+<p>接下來念ㄉㆤ˫ ㄧㆵ ㄉㄧㄠˊ</p>
+
+<h2>Case 2, vertical writing, inline Bopomofo</h2>
+
+<div class="vert">
+
+<p>這是一則ㄏㄨㄛˇ ㄒㄧㄥ ㄨㄣˊ</p>
+<p>接下來念ㄉㆤ˫ ㄧㆵ ㄉㄧㄠˊ</p>
+
+</div>
+	
+<h2>Case 3, horizontal writing Bopomofo in ruby</h2>
+
+
+<p>這是一則<ruby>火<rt>ㄏㄨㄛˇ</rt></ruby><ruby>星<rt>ㄒㄧㄥ</rt></ruby><ruby>文<rt>ㄨㄣˊ</rt></ruby></p>
+<p>接下來念<ruby>第<rt>ㄉㆤ˫</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>條<rt>ㄉㄧㄠˊ</rt></ruby></p>
+
+<h2>Case 4, vertical writing Bopomofo in ruby</h2>
+
+<div class="vert">
+	
+<p>這是一則<ruby>火<rt>ㄏㄨㄛˇ</rt></ruby><ruby>星<rt>ㄒㄧㄥ</rt></ruby><ruby>文<rt>ㄨㄣˊ</rt></ruby></p>
+<p>接下來念<ruby>第<rt>ㄉㆤ˫</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>條<rt>ㄉㄧㄠˊ</rt></ruby></p>
+
+</div>
+
+<h2>Case 5, horizontal writing Bopomofo in inter-character ruby</h2>
+
+<div class="inter">
+
+<p>這是一則火<rtc>ㄏㄨㄛˇ</rtc>星<rtc>ㄒㄧㄥ</rtc>文<rtc>ㄨㄣˊ</rtc></p>
+<p>接下來念第<rtc>ㄉㆤ˫</rtc>一<rtc>ㄧㆵ</rtc>條<rtc>ㄉㄧㄠˊ</rtc></p>
+
+</div>
+</body></html>
