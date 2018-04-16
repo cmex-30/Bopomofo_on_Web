@@ -1,4 +1,19 @@
-# BopomofoLayoutTest
+# 注音符號數位化顯示計畫
+
+本Repo主要目的是：尋求讓中文注音符號，在Web以及其他環境下，能以更符合數位化需求的方式呈現的方法。
+
+## 傳統的做法：注音字型
+
+![](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/images/bopomofofont.jpg)
+
+## 為什麼不建議使用注音字型
+
+## 使用HTML Ruby標註注音
+
+
+-----
+
+# 注音符號版面呈現測試
 Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
 
 ## 標注注意事項
