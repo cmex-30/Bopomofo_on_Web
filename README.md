@@ -47,12 +47,74 @@
 
 ## 注音符號使用的字元
 
+### 一般注音符號 | General Bopomofo Symbol
+
+#### 聲調符號 | Tone Mark Symbol
+
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
 輕聲 | ˙ | U+02D9 | DOT ABOVE
 二聲 | ˊ | U+02CA | MODIFIER LETTER ACUTE ACCENT
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
+
+#### 注音符號 | Bopomofo Sympol
+
+符號 | Unicode代碼 | Unicode名稱
+------ | ------- | -------
+ㄅ	 | 	U+3105 | BOPOMOFO LETTER B
+ㄆ	 | 	U+3106 | BOPOMOFO LETTER P
+ㄇ	 | 	U+3107 | BOPOMOFO LETTER M
+ㄈ	 | 	U+3108 | BOPOMOFO LETTER F
+ㄉ	 | 	U+3109 | BOPOMOFO LETTER D 
+ㄊ	 | 	U+310A | BOPOMOFO LETTER T
+ㄋ	 | 	U+310B | BOPOMOFO LETTER N
+ㄌ	 | 	U+310C | BOPOMOFO LETTER L 
+ㄍ	 | 	U+310D | BOPOMOFO LETTER G
+ㄎ	 | 	U+310E | BOPOMOFO LETTER K
+ㄏ	 | 	U+310F | BOPOMOFO LETTER H
+ㄐ	 | 	U+3110 | BOPOMOFO LETTER J
+ㄑ	 | 	U+3111 | BOPOMOFO LETTER Q
+ㄒ	 | 	U+3112 | BOPOMOFO LETTER X
+ㄓ	 | 	U+3113 | BOPOMOFO LETTER ZH
+ㄔ	 | 	U+3114 | BOPOMOFO LETTER CH
+ㄕ	 | 	U+3115 | BOPOMOFO LETTER SH
+ㄖ	 | 	U+3116 | BOPOMOFO LETTER R
+ㄗ	 | 	U+3117 | BOPOMOFO LETTER Z
+ㄘ	 | 	U+3118 | BOPOMOFO LETTER C
+ㄙ	 | 	U+3119 | BOPOMOFO LETTER S
+ㄚ	 | 	U+311A | BOPOMOFO LETTER A
+ㄛ	 | 	U+311B | BOPOMOFO LETTER O
+ㄜ	 | 	U+311C | BOPOMOFO LETTER E
+ㄝ	 | 	U+311D | BOPOMOFO LETTER EH
+ㄞ	 | 	U+311E | BOPOMOFO LETTER AI
+ㄟ	 | 	U+311F | BOPOMOFO LETTER EI
+ㄠ	 | 	U+3120 | BOPOMOFO LETTER AU
+ㄡ	 | 	U+3121 | BOPOMOFO LETTER OU
+ㄢ	 | 	U+3122 | BOPOMOFO LETTER AN
+ㄣ	 | 	U+3123 | BOPOMOFO LETTER EN
+ㄤ	 | 	U+3124 | BOPOMOFO LETTER ANG
+ㄥ	 | 	U+3125 | BOPOMOFO LETTER ENG
+ㄦ	 | 	U+3126 | BOPOMOFO LETTER ER
+ㄧ	 | 	U+3127 | BOPOMOFO LETTER I
+ㄨ	 | 	U+3128 | BOPOMOFO LETTER U
+ㄩ	 | 	U+3129 | BOPOMOFO LETTER IU
+
+#### 罕用注音符號 Rare Use Bopomofo Symbol
+
+符號 | Unicode代碼 | Unicode名稱
+------ | ------- | -------
+ㄪ | U+312A | BOPOMOFO LETTER V
+ㄫ | U+312B | BOPOMOFO LETTER NG
+ㄬ | U+312D | BOPOMOFO LETTER IH
+ㄭ | U+312C | BOPOMOFO LETTER GN
+
+### 注音符號延伸 | Bopomofo Extended for Dialect
+
+#### 聲調符號 | Tone Mark Symbol
+
+聲調 | 符號 | Unicode代碼 | Unicode名稱
+------- | ------- | ------- | -------
 
 
 ## 注音符號標注方式
