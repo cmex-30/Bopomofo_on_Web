@@ -106,8 +106,8 @@
 ------ | ------- | -------
 ㄪ | U+312A | BOPOMOFO LETTER V
 ㄫ | U+312B | BOPOMOFO LETTER NG
-ㄬ | U+312D | BOPOMOFO LETTER IH
-ㄭ | U+312C | BOPOMOFO LETTER GN
+ㄬ | U+312C | BOPOMOFO LETTER GN
+ㄭ | U+312D | BOPOMOFO LETTER IH
 
 ### 注音符號延伸 | Bopomofo Extended for Dialect
 
