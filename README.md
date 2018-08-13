@@ -150,4 +150,4 @@ Test Browser ruby position: inter-charater implement and OpenType feature to tun
 
 # 字型授權方式
 
-測試字體（BopomofoGPOS.otf）使用SIL Open Font License (OFL-1.1)授權。
+測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
