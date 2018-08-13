@@ -147,3 +147,7 @@ Test Browser ruby position: inter-charater implement and OpenType feature to tun
 ## 其他測試與相容性
 
 相容於[LibreOffice](https://github.com/harfbuzz/harfbuzz/issues/532#issuecomment-375284467)
+
+# 字型授權方式
+
+測試字體（BopomofoGPOS.otf）使用SIL Open Font License (OFL-1.1)授權。
