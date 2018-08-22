@@ -1,6 +1,6 @@
 # 注音符號數位化顯示計畫
 
-（作者：@bobbytung 2018/4/19編輯，未完）
+（作者：@bobbytung 2018/8/22編輯，未完）
 
 本Repo主要目的是：尋求讓中文注音符號，在Web以及其他環境下，能以更符合數位化需求的方式呈現的方法。
 
@@ -19,37 +19,19 @@
 
 - 缺乏語義資訊
 
-注音字型若要使用在網頁上，則需要透過字體標注來切換，例如：
+- 缺少無障礙支援
 
-    CSS
-     @font-face {
-      font-family: "Bopomofo01";
-      src: url("Bopomofo01.ttf");}
-      .sound1 {
-      font-family: "Bopomofo01";}
-      ......重複1-6
+- 缺少擴充性
 
-    HTML
-    <p>這個字唸<span class="sound1">作</span>什麼</p>
-
-如此一來，在缺乏外部資料的狀況下，我們無法辨別該字的讀音為何。
-
-- 無法顯示例外狀況
-
-例外狀況包括：教育部一字多音審定表外的讀法，以及刻意的誤字（如教師出的試卷）。
+（詳細請讀「[從注音字體談資訊設計](https://medium.com/@bobtung/從注音字體談資訊設計-14cb09ff9d52)」）故以並不適宜用於數位內容的顯示。
 
 -----
 
-# Web使用HTML Ruby標註
+# 注音符號使用的字元
 
-早在2001年網頁標準的測定中，就已經將注音符號納入[Ruby規範](https://www.w3.org/TR/2001/WD-css3-ruby-20010216/)之中，但標註方式以及顯示方式，直到2012年HTML 5規格確立以後才底定。
+## 一般注音符號 | General Bopomofo Symbol
 
-
-## 注音符號使用的字元
-
-### 一般注音符號 | General Bopomofo Symbol
-
-#### 聲調符號 | Tone Mark Symbol
+### 聲調符號 | Tone Mark Symbol
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -58,7 +40,7 @@
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
 
-#### 注音符號 | Bopomofo Sympol
+### 注音符號 | Bopomofo Sympol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -100,36 +82,105 @@
 ㄨ	 | 	U+3128 | BOPOMOFO LETTER U
 ㄩ	 | 	U+3129 | BOPOMOFO LETTER IU
 
-#### 罕用注音符號 Rare Use Bopomofo Symbol
+### 罕用注音符號 Rare Use Bopomofo Symbol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
 ㄪ | U+312A | BOPOMOFO LETTER V
-ㄫ | U+312B | BOPOMOFO LETTER NG
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
-### 注音符號延伸 | Bopomofo Extended for Dialect
+## 注音符號延伸 | Bopomofo Extended for Dialect
 
-#### 聲調符號 | Tone Mark Symbol
+### 方音注音符號 | Bopomofo Symbol for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
+ㄫ | U+312B | BOPOMOFO LETTER NG
+ㆠ | U+31A0 | BOPOMOFO LETTER BU	
+ㆡ | U+31A1 | BOPOMOFO LETTER ZI	
+ㆢ | U+31A2 | BOPOMOFO LETTER JI	
+ㆣ | U+31A3 | BOPOMOFO LETTER GU	
+ㆤ | U+31A4 | BOPOMOFO LETTER EE
+ㆥ | U+31A5 | BOPOMOFO LETTER ENN	
+ㆦ | U+31A6 | BOPOMOFO LETTER OO	
+ㆧ | U+31A7 | BOPOMOFO LETTER ONN	
+ㆩ | U+31A9 | BOPOMOFO LETTER ANN	
+ㆪ | U+31AA | BOPOMOFO LETTER INN	
+ㆫ | U+31AB | BOPOMOFO LETTER UNN
+ㆬ | U+31AC | BOPOMOFO LETTER IM
+ㆭ | U+31AD | BOPOMOFO LETTER NGG
+ㆮ | U+31AE | BOPOMOFO LETTER AINN	
+ㆯ | U+31AF | BOPOMOFO LETTER AUNN
+ㆰ | U+31B0 | BOPOMOFO LETTER AM
+ㆱ | U+31B1 | BOPOMOFO LETTER OM	
+ㆲ | U+31B2 | BOPOMOFO LETTER ONG
 
+### 方音聲調符號 | Tone Mark Symbol for Dialect
+
+聲調 | 符號 | Unicode代碼 | Unicode名稱
+------- | ------- | ------- | -------
+ㆴ | U+31B4 | BOPOMOFO FINAL LETTER P
+ㆵ | U+31B5 | BOPOMOFO FINAL LETTER T
+ㆷ | U+31B7 | BOPOMOFO FINAL LETTER H
+<sub>ㄍ</sub> | U+31BB | BOPOMOFO FINAL LETTER G [^1]
+
+[^1]: U+31BB於2018年6月提交至ISO/IEC JTC1 WG2，將於未來加入Unicode標準之中，詳細請見[提案文件](https://unicode.org/wg2/docs/n4980_Proposal-Bopomofo_Extended.pdf)。
+
+-----
+
+# Web使用HTML Ruby標註
+
+早在2001年網頁標準的測定中，就已經將注音符號納入[Ruby規範](https://www.w3.org/TR/2001/WD-css3-ruby-20010216/)之中，但標註方式以及顯示方式，直到2012年HTML 5規格確立以後才底定。
 
 ## 注音符號標注方式
 
-二三四聲置於注音符號之後
+請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及[W3C i18n Ruby Markup](https://www.w3.org/International/articles/ruby/markup)。
 
-    <ruby>我<rt>ㄨㄛˇ</rt></ruby>
+原則上在HTML中標註方式如下，每一字使用Mono Ruby方式標注：
 
-輕聲置於注音符號之前
+- 二三四聲置於注音符號之後
 
-    <ruby>呢<rt>˙ㄋㄜ</rt></ruby>
+```<ruby>我<rt>ㄨㄛˇ</rt></ruby>```
 
+- 輕聲置於注音符號之前
 
+```<ruby>呢<rt>˙ㄋㄜ</rt></ruby>```
 
+另外，[Tabular ruby markup model](https://www.w3.org/International/articles/ruby/markup#tabular)目前瀏覽器支援性較低，不建議使用，標注方式如下：
 
+```<ruby><rb>你<rb>好<rb>嗎<rt>ㄋㄧˇ<rt>ㄏㄠˇ<rt>˙ㄇㄚ</ruby>```
+
+## 與注音符號相關的CSS語法
+
+請參照[CSS Ruby Layout Module Level 1](https://www.w3.org/TR/css-ruby-1/)。
+
+基本上需注意點如下：
+
+- 在```<rt>```元素內指定Ruby文字尺寸，建議為基字的30%
+
+```rt {font-size: 30%;}```
+
+- 當要將注音於橫排時至於基字右側時，使用```ruby-position: inter-character;```
+
+- 注音直排時，由於目前Unicode中調號於直排中（請見[UTR#50](http://www.unicode.org/reports/tr50/tr50-19.html)）並非直立文字，所以需要強制直立，如：
+
+```rt {text-orientation: upright;}```
+
+- 注音排列建議使其與基字居中對齊
+
+``` rt {text-align: center;}```
+
+# 使用注音調號字體
+
+在CSS中宣告本專案提供的字體檔案即可
+
+    @font-face {font-family: BopomofoGPOS;
+     src: url("BopomofoGPOS.otf");
+    }
+    body {
+     font-family: BopomofoGPOS,serif;
+    }
 
 # 注音符號版面呈現測試
 Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
@@ -150,4 +201,4 @@ Test Browser ruby position: inter-charater implement and OpenType feature to tun
 
 # 字型授權方式
 
-測試字體（BopomofoGPOS.otf）使用SIL Open Font License (OFL-1.1)授權。
+測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
