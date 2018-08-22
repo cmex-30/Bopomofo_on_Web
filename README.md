@@ -215,7 +215,7 @@
 1. [基字橫排，注音置於基字上方](https://bobbytung.github.io/Bopomofo_on_Web/case01/index.html)
 2. [基字直排，注音置於基字右方](https://bobbytung.github.io/Bopomofo_on_Web/case02/index.html)
 3. [基字橫排，注音使用ruby-position: inter-character置於基字右方](https://bobbytung.github.io/Bopomofo_on_Web/case03/index.html)
-4. [注音出現於內文]((https://bobbytung.github.io/Bopomofo_on_Web/case04/index.html)
+4. [注音出現於內文](https://bobbytung.github.io/Bopomofo_on_Web/case04/index.html)
 5. [基字直排，注音置於基字右方（舊版）](https://bobbytung.github.io/Bopomofo_on_Web/case05/index.html)
 6. [基字直排，注音置於基字右方（使用`vert`的更新版）](https://bobbytung.github.io/Bopomofo_on_Web/case06/index.html)
 7. [五種狀況的組合顯示](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
