@@ -19,24 +19,11 @@
 
 - 缺乏語義資訊
 
-注音字型若要使用在網頁上，則需要透過字體標注來切換，例如：
+- 缺少無障礙支援
 
-    CSS
-     @font-face {
-      font-family: "Bopomofo01";
-      src: url("Bopomofo01.ttf");}
-      .sound1 {
-      font-family: "Bopomofo01";}
-      ......重複1-6
+- 缺少擴充性
 
-    HTML
-    <p>這個字唸<span class="sound1">作</span>什麼</p>
-
-如此一來，在缺乏外部資料的狀況下，我們無法辨別該字的讀音為何。
-
-- 無法顯示例外狀況
-
-例外狀況包括：教育部一字多音審定表外的讀法，以及刻意的誤字（如教師出的試卷）。
+（詳細請讀「[從注音字體談資訊設計](https://medium.com/@bobtung/從注音字體談資訊設計-14cb09ff9d52)」）故以並不適宜用於數位內容的顯示。
 
 -----
 
@@ -105,25 +92,57 @@
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
 ㄪ | U+312A | BOPOMOFO LETTER V
-ㄫ | U+312B | BOPOMOFO LETTER NG
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
 ### 注音符號延伸 | Bopomofo Extended for Dialect
 
-#### 聲調符號 | Tone Mark Symbol
+#### 方音注音符號 | Bopomofo Symbol for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
+ㄫ | U+312B | BOPOMOFO LETTER NG
+ㆠ | U+31A0 | BOPOMOFO LETTER BU	
+ㆡ | U+31A1 | BOPOMOFO LETTER ZI	
+ㆢ | U+31A2 | BOPOMOFO LETTER JI	
+ㆣ | U+31A3 | BOPOMOFO LETTER GU	
+ㆤ | U+31A4 | BOPOMOFO LETTER EE
+ㆥ | U+31A5 | BOPOMOFO LETTER ENN	
+ㆦ | U+31A6 | BOPOMOFO LETTER OO	
+ㆧ | U+31A7 | BOPOMOFO LETTER ONN	
+ㆩ | U+31A9 | BOPOMOFO LETTER ANN	
+ㆪ | U+31AA | BOPOMOFO LETTER INN	
+ㆫ | U+31AB | BOPOMOFO LETTER UNN
+ㆬ | U+31AC | BOPOMOFO LETTER IM
+ㆭ | U+31AD | BOPOMOFO LETTER NGG
+ㆮ | U+31AE | BOPOMOFO LETTER AINN	
+ㆯ | U+31AF | BOPOMOFO LETTER AUNN
+ㆰ | U+31B0 | BOPOMOFO LETTER AM
+ㆱ | U+31B1 | BOPOMOFO LETTER OM	
+ㆲ | U+31B2 | BOPOMOFO LETTER ONG
 
+#### 方音聲調符號 | Tone Mark Symbol for Dialect
+
+聲調 | 符號 | Unicode代碼 | Unicode名稱
+------- | ------- | ------- | -------
+ㆴ | U+31B4 | BOPOMOFO FINAL LETTER P
+ㆵ | U+31B5 | BOPOMOFO FINAL LETTER T
+ㆷ | U+31B7 | BOPOMOFO FINAL LETTER H
+<sub>ㄍ</sub> | U+31BB | BOPOMOFO FINAL LETTER G [^1]
+
+[^1]: U+31BB於2018年6月提交至ISO/IEC JTC1 WG2，將於未來加入Unicode標準之中，詳細請見[提案文件](https://unicode.org/wg2/docs/n4980_Proposal-Bopomofo_Extended.pdf)。
 
 ## 注音符號標注方式
 
-二三四聲置於注音符號之後
+請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及Richard Ishida所著[Bopomofo one the web](https://r12a.github.io/scripts/bopomofo/ontheweb)
+
+原則上在HTML中標註方式如下：
+
+- 二三四聲置於注音符號之後
 
     <ruby>我<rt>ㄨㄛˇ</rt></ruby>
 
-輕聲置於注音符號之前
+- 輕聲置於注音符號之前
 
     <ruby>呢<rt>˙ㄋㄜ</rt></ruby>
 
