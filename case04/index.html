@@ -12,29 +12,22 @@ html {
 }
 
 .vert {
-	-moz-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	-o-writing-mode: vertical-rl;
-	-webkit-writing-mode: vertical-rl;
-  	writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   	margin-left: auto;
   	margin-right: auto;
 }
 
 @font-face { 
 	font-family: TestFont; 
-	src: url(bpmfgpos.otf); 
+	src: url(BopomofoGPOS.otf); 
 }
 
 p {
 	text-align: justify;
 	text-justify: ideographic;
 /* in this case, use OpenType feature 'vkrn' instead of 'mark' */
-	font-feature-settings: "vkrn";
-	-moz-font-feature-settings: "vkrn=1";
-	-ms-font-feature-settings: "vkrn";
-	-webkit-font-feature-settings: "vkrn";
-	-o-font-feature-settings: "vkrn";
+
 }
 
 
