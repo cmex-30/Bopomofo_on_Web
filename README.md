@@ -27,16 +27,11 @@
 
 -----
 
-# Web使用HTML Ruby標註
+# 注音符號使用的字元
 
-早在2001年網頁標準的測定中，就已經將注音符號納入[Ruby規範](https://www.w3.org/TR/2001/WD-css3-ruby-20010216/)之中，但標註方式以及顯示方式，直到2012年HTML 5規格確立以後才底定。
+## 一般注音符號 | General Bopomofo Symbol
 
-
-## 注音符號使用的字元
-
-### 一般注音符號 | General Bopomofo Symbol
-
-#### 聲調符號 | Tone Mark Symbol
+### 聲調符號 | Tone Mark Symbol
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -45,7 +40,7 @@
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
 
-#### 注音符號 | Bopomofo Sympol
+### 注音符號 | Bopomofo Sympol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -87,7 +82,7 @@
 ㄨ	 | 	U+3128 | BOPOMOFO LETTER U
 ㄩ	 | 	U+3129 | BOPOMOFO LETTER IU
 
-#### 罕用注音符號 Rare Use Bopomofo Symbol
+### 罕用注音符號 Rare Use Bopomofo Symbol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -95,9 +90,9 @@
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
-### 注音符號延伸 | Bopomofo Extended for Dialect
+## 注音符號延伸 | Bopomofo Extended for Dialect
 
-#### 方音注音符號 | Bopomofo Symbol for Dialect
+### 方音注音符號 | Bopomofo Symbol for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -121,7 +116,7 @@
 ㆱ | U+31B1 | BOPOMOFO LETTER OM	
 ㆲ | U+31B2 | BOPOMOFO LETTER ONG
 
-#### 方音聲調符號 | Tone Mark Symbol for Dialect
+### 方音聲調符號 | Tone Mark Symbol for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -132,9 +127,15 @@
 
 [^1]: U+31BB於2018年6月提交至ISO/IEC JTC1 WG2，將於未來加入Unicode標準之中，詳細請見[提案文件](https://unicode.org/wg2/docs/n4980_Proposal-Bopomofo_Extended.pdf)。
 
+-----
+
+# Web使用HTML Ruby標註
+
+早在2001年網頁標準的測定中，就已經將注音符號納入[Ruby規範](https://www.w3.org/TR/2001/WD-css3-ruby-20010216/)之中，但標註方式以及顯示方式，直到2012年HTML 5規格確立以後才底定。
+
 ## 注音符號標注方式
 
-請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及[W3C i18n Ruby Markup](https://www.w3.org/International/articles/ruby/markup)
+請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及[W3C i18n Ruby Markup](https://www.w3.org/International/articles/ruby/markup)。
 
 原則上在HTML中標註方式如下，每一字使用Mono Ruby方式標注：
 
@@ -149,6 +150,28 @@
 另外，[Tabular ruby markup model](https://www.w3.org/International/articles/ruby/markup#tabular)目前瀏覽器支援性較低，不建議使用，標注方式如下：
 
 ```<ruby><rb>你<rb>好<rb>嗎<rt>ㄋㄧˇ<rt>ㄏㄠˇ<rt>˙ㄇㄚ</ruby>```
+
+## 與注音符號相關的CSS語法
+
+請參照[CSS Ruby Layout Module Level 1](https://www.w3.org/TR/css-ruby-1/)。
+
+基本上需注意點如下：
+
+- 在```<rt>```元素內指定Ruby文字尺寸，建議為基字的30%
+
+```rt {font-size: 30%;}```
+
+- 當要將注音於橫排時至於基字右側時，使用```ruby-position: inter-character;```
+
+- 注音直排時，由於目前Unicode中調號於直排中（請見[UTR#50](http://www.unicode.org/reports/tr50/tr50-19.html)）並非直立文字，所以需要強制直立，如：
+
+```rt {text-orientation: upright;}```
+
+- 注音排列建議使其與基字居中對齊
+
+``` rt {text-align: center;}```
+
+
 
 # 注音符號版面呈現測試
 Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
