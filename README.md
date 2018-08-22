@@ -1,6 +1,6 @@
 # 注音符號數位化顯示計畫
 
-（作者：@bobbytung 2018/4/19編輯，未完）
+（作者：@bobbytung 2018/8/22編輯，未完）
 
 本Repo主要目的是：尋求讓中文注音符號，在Web以及其他環境下，能以更符合數位化需求的方式呈現的方法。
 
@@ -171,7 +171,16 @@
 
 ``` rt {text-align: center;}```
 
+# 使用注音調號字體
 
+在CSS中宣告本專案提供的字體檔案即可
+
+    @font-face {font-family: BopomofoGPOS;
+     src: url("BopomofoGPOS.otf");
+    }
+    body {
+     font-family: BopomofoGPOS,serif;
+    }
 
 # 注音符號版面呈現測試
 Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
