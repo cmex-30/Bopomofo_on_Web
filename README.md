@@ -171,6 +171,8 @@
 
 ``` rt {text-align: center;}```
 
+-----
+
 # 使用注音調號字體
 
 在CSS中宣告本專案提供的字體檔案即可
@@ -182,23 +184,56 @@
      font-family: BopomofoGPOS,serif;
     }
 
+本字體使用OpenType的功能來調整調號位置，詳細說明如下：
+
+- 當基字橫排，注音置放於基字上方時，調號使用`ruby`來調整位置
+- 當基字橫排或直排，注音直立置放於基字右方時，將調號更換為組合符號（如下表）後，使用GPOS`vert`來調整座標位置。
+
+聲調 | Unicode代碼 | 取代符號 | Unicode代碼
+------- | ------- | ------- | -------
+ˊ | U+02CA |  ́ | U+0301
+ˇ | U+02C7 |  ̌ | U+030C
+ˋ | U+02CB |  ̀ | U+0300
+
+詳細請見[完整的Font Feature規格](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font/feature)。
+
+## 字型授權方式
+
+測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
+
+-----
+
 # 注音符號版面呈現測試
-Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
+
+注音符號測試案例有七，皆使用注音調號字體來作為顯示：
+
+1. [基字橫排，注音置於基字上方](https://bobbytung.github.io/Bopomofo_on_Web/case01/index.html)
+2. [基字直排，注音置於基字右方](https://bobbytung.github.io/Bopomofo_on_Web/case02/index.html)
+3. [基字橫排，注音使用ruby-position: inter-character置於基字右方](https://bobbytung.github.io/Bopomofo_on_Web/case03/index.html)
+4. [注音出現於內文]((https://bobbytung.github.io/Bopomofo_on_Web/case04/index.html)
+5. [基字直排，注音置於基字右方（舊版）](https://bobbytung.github.io/Bopomofo_on_Web/case05/index.html)
+6. [基字直排，注音置於基字右方（使用`vert`的更新版）](https://bobbytung.github.io/Bopomofo_on_Web/case06/index.html)
+7. [五種狀況的組合顯示](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
+
+-----
 
 ## 標注注意事項
 
-- 由於調號（輕聲˙、二聲ˊ、三聲ˇ、四聲ˋ）在UTR#50中會轉90度，所以需要在rt元素中加入text-orientation: upright來使方向一致，調整位置才會正確。
 - Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
 - 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
 
-## 3/22更新字體
-
-詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
 
 ## 其他測試與相容性
 
 相容於[LibreOffice](https://github.com/harfbuzz/harfbuzz/issues/532#issuecomment-375284467)
 
-# 字型授權方式
+-----
 
-測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
+# 更新事項
+
+- 3/22更新字體
+詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
+
+- 8/13更新字體授權
+
+- 8/19更新字體規格
