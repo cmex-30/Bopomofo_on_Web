@@ -92,8 +92,8 @@
 
 #### 方音注音符號 | Bopomofo Symbol for Dialect
 
-聲調 | 符號 | Unicode代碼 | Unicode名稱
-------- | ------- | ------- | -------
+符號 | Unicode代碼 | Unicode名稱
+------- | ------- | -------
 ㄫ | U+312B | BOPOMOFO LETTER NG
 ㆠ | U+31A0 | BOPOMOFO LETTER BU	
 ㆡ | U+31A1 | BOPOMOFO LETTER ZI	
@@ -116,8 +116,8 @@
 
 #### 方音聲調符號 | Tone Mark Symbol for Dialect
 
-聲調 | 符號 | Unicode代碼 | Unicode名稱
-------- | ------- | ------- | -------
+符號 | Unicode代碼 | Unicode名稱
+------- | ------- | -------
 ㆴ | U+31B4 | BOPOMOFO FINAL LETTER P
 ㆵ | U+31B5 | BOPOMOFO FINAL LETTER T
 ㆷ | U+31B7 | BOPOMOFO FINAL LETTER H
