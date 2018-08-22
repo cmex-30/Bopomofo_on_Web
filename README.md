@@ -25,11 +25,11 @@
 
 -----
 
-# 注音符號使用的字元
+## 注音符號使用的字元
 
-## 一般注音符號 | General Bopomofo Symbol
+### 一般注音符號 | General Bopomofo Symbol
 
-### 聲調符號 | Tone Mark Symbol
+#### 聲調符號 | Tone Mark Symbol
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -38,7 +38,7 @@
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
 
-### 注音符號 | Bopomofo Sympol
+#### 注音符號 | Bopomofo Sympol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -80,7 +80,7 @@
 ㄨ	 | 	U+3128 | BOPOMOFO LETTER U
 ㄩ	 | 	U+3129 | BOPOMOFO LETTER IU
 
-### 罕用注音符號 Rare Use Bopomofo Symbol
+#### 罕用注音符號 Rare Use Bopomofo Symbol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -88,9 +88,9 @@
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
-## 注音符號延伸 | Bopomofo Extended for Dialect
+### 注音符號延伸 | Bopomofo Extended for Dialect
 
-### 方音注音符號 | Bopomofo Symbol for Dialect
+#### 方音注音符號 | Bopomofo Symbol for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -114,7 +114,7 @@
 ㆱ | U+31B1 | BOPOMOFO LETTER OM	
 ㆲ | U+31B2 | BOPOMOFO LETTER ONG
 
-### 方音聲調符號 | Tone Mark Symbol for Dialect
+#### 方音聲調符號 | Tone Mark Symbol for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -127,11 +127,11 @@
 
 -----
 
-# Web使用HTML Ruby標註
+## Web使用HTML Ruby標註
 
 早在2001年網頁標準的測定中，就已經將注音符號納入[Ruby規範](https://www.w3.org/TR/2001/WD-css3-ruby-20010216/)之中，但標註方式以及顯示方式，直到2012年HTML 5規格確立以後才底定。
 
-## 注音符號標注方式
+### 注音符號標注方式
 
 請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及[W3C i18n Ruby Markup](https://www.w3.org/International/articles/ruby/markup)。
 
@@ -149,7 +149,7 @@
 
 ```<ruby><rb>你<rb>好<rb>嗎<rt>ㄋㄧˇ<rt>ㄏㄠˇ<rt>˙ㄇㄚ</ruby>```
 
-## 與注音符號相關的CSS語法
+### 與注音符號相關的CSS語法
 
 請參照[CSS Ruby Layout Module Level 1](https://www.w3.org/TR/css-ruby-1/)。
 
@@ -169,14 +169,14 @@
 
 ``` rt {text-align: center;}```
 
-## 標注注意事項
+### 標注注意事項
 
 - Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
 - 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
 
 -----
 
-# 使用注音調號字體
+## 使用注音調號字體
 
 在CSS中宣告本專案提供的字體檔案即可
 
@@ -200,13 +200,13 @@
 
 詳細請見[完整的Font Feature規格](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font/feature)。
 
-## 字型授權方式
+### 字型授權方式
 
 測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
 
 -----
 
-# 注音符號版面呈現測試
+## 注音符號版面呈現測試
 
 注音符號測試案例有七，皆使用注音調號字體來作為顯示：
 
@@ -220,13 +220,13 @@
 
 -----
 
-# 其他測試與相容性
+## 其他測試與相容性
 
 相容於[LibreOffice](https://github.com/harfbuzz/harfbuzz/issues/532#issuecomment-375284467)
 
 -----
 
-# 更新事項
+## 更新事項
 
 - 3/22更新字體
 詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
