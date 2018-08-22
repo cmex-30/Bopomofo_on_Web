@@ -134,9 +134,9 @@
 
 ## 注音符號標注方式
 
-請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及Richard Ishida所著[Bopomofo one the web](https://r12a.github.io/scripts/bopomofo/ontheweb)
+請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及[W3C i18n Ruby Markup](https://www.w3.org/International/articles/ruby/markup)
 
-原則上在HTML中標註方式如下：
+原則上在HTML中標註方式如下，每一字使用Mono Ruby方式標注：
 
 - 二三四聲置於注音符號之後
 
@@ -146,6 +146,9 @@
 
 ```<ruby>呢<rt>˙ㄋㄜ</rt></ruby>```
 
+另外，[Tabular ruby markup model](https://www.w3.org/International/articles/ruby/markup#tabular)目前瀏覽器支援性較低，不建議使用，標注方式如下：
+
+```<ruby><rb>你<rb>好<rb>嗎<rt>ㄋㄧˇ<rt>ㄏㄠˇ<rt>˙ㄇㄚ</ruby>```
 
 # 注音符號版面呈現測試
 Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
