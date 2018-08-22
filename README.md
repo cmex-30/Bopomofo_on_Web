@@ -169,14 +169,7 @@
 
 ``` rt {text-align: center;}```
 
-### 標注注意事項
-
-- Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
-- 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
-
------
-
-## 使用注音調號字體
+### 使用注音調號字體
 
 在CSS中宣告本專案提供的字體檔案即可
 
@@ -186,6 +179,15 @@
     body {
      font-family: BopomofoGPOS,serif;
     }
+
+### 標注注意事項
+
+- Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
+- 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
+
+-----
+
+## 注音調號字體OpenType規格
 
 本字體使用OpenType的功能來調整調號位置，詳細說明如下：
 
