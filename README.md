@@ -1,8 +1,6 @@
 # 注音符號數位化顯示計畫
 
-（作者：@bobbytung 2018/8/22編輯，未完）
-
-本Repo主要目的是：尋求讓中文注音符號，在Web以及其他環境下，能以更符合數位化需求的方式呈現的方法。
+本計畫主要目的是：尋求讓中文注音符號，在Web以及其他數位環境下，能以更符合數位化需求的方式呈現的方法。
 
 ## 傳統的做法：注音字型
 
@@ -171,6 +169,11 @@
 
 ``` rt {text-align: center;}```
 
+## 標注注意事項
+
+- Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
+- 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
+
 -----
 
 # 使用注音調號字體
@@ -217,13 +220,7 @@
 
 -----
 
-## 標注注意事項
-
-- Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
-- 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
-
-
-## 其他測試與相容性
+# 其他測試與相容性
 
 相容於[LibreOffice](https://github.com/harfbuzz/harfbuzz/issues/532#issuecomment-375284467)
 
