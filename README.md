@@ -173,18 +173,19 @@
 
 在CSS中宣告本專案提供的字體檔案即可
 
-    @font-face {font-family: BopomofoGPOS;
-     src: url("BopomofoGPOS.otf");
+    @font-face {
+     font-family: BopomofoPro;
+     src: url("BopomofoPro-Regular.ttf");
     }
     body {
-     font-family: BopomofoGPOS,serif;
+     font-family: BopomofoPro, serif;
     }
 
 ### 標注注意事項
 
 - Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
 - 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
-- 由於BopomofoGPOS中包含英文字，建議在font-family BopomofoGPOS前指定其他英文字體來取代。
+- 由於BopomofoGPOS中包含英文字，建議在 font-family: BopomofoPro; 前指定其他英文字體來取代。
 
 -----
 
