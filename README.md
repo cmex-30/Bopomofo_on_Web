@@ -1,8 +1,6 @@
 # 注音符號數位化顯示計畫
 
-（作者：@bobbytung 2018/8/22編輯，未完）
-
-本Repo主要目的是：尋求讓中文注音符號，在Web以及其他環境下，能以更符合數位化需求的方式呈現的方法。
+本計畫主要目的是：尋求讓中文注音符號，在Web以及其他數位環境下，能以更符合數位化需求的方式呈現的方法。
 
 ## 傳統的做法：注音字型
 
@@ -27,11 +25,15 @@
 
 -----
 
-# 注音符號使用的字元
+## 注音符號使用的字元
 
+<<<<<<< HEAD
 ## 國語注音符號 | Mandarin Bopomofo Symbol
+=======
+### 一般注音符號 | General Bopomofo Symbol
+>>>>>>> f9782512c5c037b3334e48c1b6de6b9c2010440b
 
-### 聲調符號 | Tone Mark Symbol
+#### 聲調符號 | Tone Mark Symbol
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -41,9 +43,13 @@
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
 
+<<<<<<< HEAD
 [^1]: 雖有文字編碼，但僅用於輸入法選字對應等，不會用於顯示。
 
 ### 注音符號 | Bopomofo Sympol
+=======
+#### 注音符號 | Bopomofo Sympol
+>>>>>>> f9782512c5c037b3334e48c1b6de6b9c2010440b
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -85,7 +91,7 @@
 ㄨ	 | 	U+3128 | BOPOMOFO LETTER U
 ㄩ	 | 	U+3129 | BOPOMOFO LETTER IU
 
-### 罕用注音符號 Rare Use Bopomofo Symbol
+#### 罕用注音符號 Rare Use Bopomofo Symbol
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -94,14 +100,20 @@
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
+<<<<<<< HEAD
 [^2]: U+312Bㄫ同時為方音注音常用符號
 
 ## 注音符號延伸 | Bopomofo Extended
 
 ### 方音注音符號 | Bopomofo Symbols for Dialect
+=======
+### 注音符號延伸 | Bopomofo Extended for Dialect
 
-聲調 | 符號 | Unicode代碼 | Unicode名稱
-------- | ------- | ------- | -------
+#### 方音注音符號 | Bopomofo Symbol for Dialect
+>>>>>>> f9782512c5c037b3334e48c1b6de6b9c2010440b
+
+符號 | Unicode代碼 | Unicode名稱
+------- | ------- | -------
 ㄫ | U+312B | BOPOMOFO LETTER NG
 ㆠ | U+31A0 | BOPOMOFO LETTER BU	
 ㆡ | U+31A1 | BOPOMOFO LETTER ZI	
@@ -122,10 +134,10 @@
 ㆱ | U+31B1 | BOPOMOFO LETTER OM	
 ㆲ | U+31B2 | BOPOMOFO LETTER ONG
 
-### 方音聲調符號 | Tone Mark Symbol for Dialect
+#### 方音聲調符號 | Tone Mark Symbol for Dialect
 
-聲調 | 符號 | Unicode代碼 | Unicode名稱
-------- | ------- | ------- | -------
+符號 | Unicode代碼 | Unicode名稱
+------- | ------- | -------
 ㆴ | U+31B4 | BOPOMOFO FINAL LETTER P
 ㆵ | U+31B5 | BOPOMOFO FINAL LETTER T
 ㆷ | U+31B7 | BOPOMOFO FINAL LETTER H
@@ -135,11 +147,11 @@
 
 -----
 
-# Web使用HTML Ruby標註
+## Web使用HTML Ruby標註
 
 早在2001年網頁標準的測定中，就已經將注音符號納入[Ruby規範](https://www.w3.org/TR/2001/WD-css3-ruby-20010216/)之中，但標註方式以及顯示方式，直到2012年HTML 5規格確立以後才底定。
 
-## 注音符號標注方式
+### 注音符號標注方式
 
 請參照[W3C HTML Ruby Markup Extensions](https://www.w3.org/TR/html-ruby-extensions/)以及[W3C i18n Ruby Markup](https://www.w3.org/International/articles/ruby/markup)。
 
@@ -157,7 +169,7 @@
 
 ```<ruby><rb>你<rb>好<rb>嗎<rt>ㄋㄧˇ<rt>ㄏㄠˇ<rt>˙ㄇㄚ</ruby>```
 
-## 與注音符號相關的CSS語法
+### 與注音符號相關的CSS語法
 
 請參照[CSS Ruby Layout Module Level 1](https://www.w3.org/TR/css-ruby-1/)。
 
@@ -177,34 +189,72 @@
 
 ``` rt {text-align: center;}```
 
-# 使用注音調號字體
+### 使用注音調號字體
 
 在CSS中宣告本專案提供的字體檔案即可
 
-    @font-face {font-family: BopomofoGPOS;
-     src: url("BopomofoGPOS.otf");
+    @font-face {
+     font-family: BopomofoPro;
+     src: url("BopomofoPro-Regular.ttf");
     }
     body {
-     font-family: BopomofoGPOS,serif;
+     font-family: BopomofoPro, serif;
     }
 
-# 注音符號版面呈現測試
-Test Browser ruby position: inter-charater implement and OpenType feature to tuning Tone Mark position in both horizontal and vertical writing.
+### 標注注意事項
 
-## 標注注意事項
-
-- 由於調號（輕聲˙、二聲ˊ、三聲ˇ、四聲ˋ）在UTR#50中會轉90度，所以需要在rt元素中加入text-orientation: upright來使方向一致，調整位置才會正確。
 - Chrome的Ruby接受對齊語法，所以需要在rt元素中加入text-align: center讓注音符號居中對齊。
 - 注音字體指定若僅套用在ruby標籤時，會因為Fallback在Chrome上加寬與被標註漢字間的距離，所以須在body使用font-family: BopomofoGPOS, serif 來調整。
+- 由於BopomofoGPOS中包含英文字，建議在 font-family: BopomofoPro; 前指定其他英文字體來取代。
 
-## 3/22更新字體
+-----
 
-詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
+## 注音調號字體OpenType規格
+
+本字體使用OpenType的功能來調整調號位置，詳細說明如下：
+
+- 當基字橫排，注音置放於基字上方時，調號使用`ruby`來調整位置
+- 當基字橫排或直排，注音直立置放於基字右方時，將調號更換為組合符號（如下表）後，使用GPOS`vert`來調整座標位置。
+
+聲調 | Unicode代碼 | 取代符號 | Unicode代碼
+------- | ------- | ------- | -------
+ˊ | U+02CA |  ́ | U+0301
+ˇ | U+02C7 |  ̌ | U+030C
+ˋ | U+02CB |  ̀ | U+0300
+
+詳細請見[完整的Font Feature規格](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font/feature)。
+
+### 字型授權方式
+
+測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
+
+-----
+
+## 注音符號版面呈現測試
+
+注音符號測試案例有七，皆使用注音調號字體來作為顯示：
+
+1. [基字橫排，注音置於基字上方](https://bobbytung.github.io/Bopomofo_on_Web/case01/index.html)
+2. [基字直排，注音置於基字右方](https://bobbytung.github.io/Bopomofo_on_Web/case02/index.html)
+3. [基字橫排，注音使用ruby-position: inter-character置於基字右方](https://bobbytung.github.io/Bopomofo_on_Web/case03/index.html)
+4. [注音出現於內文](https://bobbytung.github.io/Bopomofo_on_Web/case04/index.html)
+5. [基字直排，注音置於基字右方（舊版）](https://bobbytung.github.io/Bopomofo_on_Web/case05/index.html)
+6. [基字直排，注音置於基字右方（使用`vert`的更新版）](https://bobbytung.github.io/Bopomofo_on_Web/case06/index.html)
+7. [五種狀況的組合顯示](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
+
+-----
 
 ## 其他測試與相容性
 
 相容於[LibreOffice](https://github.com/harfbuzz/harfbuzz/issues/532#issuecomment-375284467)
 
-# 字型授權方式
+-----
 
-測試字體（BopomofoGPOS.otf）使用[SIL Open Font License (OFL-1.1)授權](https://github.com/bobbytung/Bopomofo_on_Web/blob/master/font_license.html)。
+## 更新事項
+
+- 3/22更新字體
+詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
+
+- 8/13更新字體授權
+
+- 8/19更新字體規格
