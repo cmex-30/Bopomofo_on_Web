@@ -29,16 +29,19 @@
 
 # 注音符號使用的字元
 
-## 一般注音符號 | General Bopomofo Symbol
+## 國語注音符號 | Mandarin Bopomofo Symbol
 
 ### 聲調符號 | Tone Mark Symbol
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
 輕聲 | ˙ | U+02D9 | DOT ABOVE
+平聲 | ˉ | U+02C9 | MODIFIER LETTER MACRON[^1]
 二聲 | ˊ | U+02CA | MODIFIER LETTER ACUTE ACCENT
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
+
+[^1]: 雖有文字編碼，但僅用於輸入法選字對應等，不會用於顯示。
 
 ### 注音符號 | Bopomofo Sympol
 
@@ -87,12 +90,15 @@
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
 ㄪ | U+312A | BOPOMOFO LETTER V
+ㄫ | U+312B | BOPOMOFO LETTER NG[^2]
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
-## 注音符號延伸 | Bopomofo Extended for Dialect
+[^2]: U+312Bㄫ同時為方音注音常用符號
 
-### 方音注音符號 | Bopomofo Symbol for Dialect
+## 注音符號延伸 | Bopomofo Extended
+
+### 方音注音符號 | Bopomofo Symbols for Dialect
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -123,9 +129,9 @@
 ㆴ | U+31B4 | BOPOMOFO FINAL LETTER P
 ㆵ | U+31B5 | BOPOMOFO FINAL LETTER T
 ㆷ | U+31B7 | BOPOMOFO FINAL LETTER H
-<sub>ㄍ</sub> | U+31BB | BOPOMOFO FINAL LETTER G [^1]
+<sub>ㄍ</sub> | U+31BB | BOPOMOFO FINAL LETTER G [^3]
 
-[^1]: U+31BB於2018年6月提交至ISO/IEC JTC1 WG2，將於未來加入Unicode標準之中，詳細請見[提案文件](https://unicode.org/wg2/docs/n4980_Proposal-Bopomofo_Extended.pdf)。
+[^3]: U+31BB於2018年6月提交至ISO/IEC JTC1 WG2，將於未來加入Unicode標準之中，詳細請見[提案文件](https://unicode.org/wg2/docs/n4980_Proposal-Bopomofo_Extended.pdf)。
 
 -----
 
