@@ -27,13 +27,11 @@
 
 ## 注音符號使用的字元
 
-<<<<<<< HEAD
-## 國語注音符號 | Mandarin Bopomofo Symbol
-=======
-### 一般注音符號 | General Bopomofo Symbol
->>>>>>> f9782512c5c037b3334e48c1b6de6b9c2010440b
+### 國語注音符號 | Mandarin Bopomofo Symbols
 
-#### 聲調符號 | Tone Mark Symbol
+#### 一般注音符號 | General Bopomofo Symbols
+
+#### 聲調符號 | Tone Marks
 
 聲調 | 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | ------- | -------
@@ -43,13 +41,9 @@
 三聲 | ˇ | U+02C7 | CARON
 四聲 | ˋ | U+02CB | MODIFIER LETTER GRAVE ACCENT
 
-<<<<<<< HEAD
 [^1]: 雖有文字編碼，但僅用於輸入法選字對應等，不會用於顯示。
 
-### 注音符號 | Bopomofo Sympol
-=======
 #### 注音符號 | Bopomofo Sympol
->>>>>>> f9782512c5c037b3334e48c1b6de6b9c2010440b
 
 符號 | Unicode代碼 | Unicode名稱
 ------ | ------- | -------
@@ -100,17 +94,13 @@
 ㄬ | U+312C | BOPOMOFO LETTER GN
 ㄭ | U+312D | BOPOMOFO LETTER IH
 
-<<<<<<< HEAD
 [^2]: U+312Bㄫ同時為方音注音常用符號
 
 ## 注音符號延伸 | Bopomofo Extended
 
 ### 方音注音符號 | Bopomofo Symbols for Dialect
-=======
-### 注音符號延伸 | Bopomofo Extended for Dialect
 
 #### 方音注音符號 | Bopomofo Symbol for Dialect
->>>>>>> f9782512c5c037b3334e48c1b6de6b9c2010440b
 
 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | -------
