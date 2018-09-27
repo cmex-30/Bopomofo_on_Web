@@ -100,8 +100,6 @@
 
 ### 方音注音符號 | Bopomofo Symbols for Dialect
 
-#### 方音注音符號 | Bopomofo Symbol for Dialect
-
 符號 | Unicode代碼 | Unicode名稱
 ------- | ------- | -------
 ㄫ | U+312B | BOPOMOFO LETTER NG
