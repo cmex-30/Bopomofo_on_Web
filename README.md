@@ -229,6 +229,7 @@
 5. [基字直排，注音置於基字右方（舊版）](https://bobbytung.github.io/Bopomofo_on_Web/case05/index.html)
 6. [基字直排，注音置於基字右方（使用`vert`的更新版）](https://bobbytung.github.io/Bopomofo_on_Web/case06/index.html)
 7. [五種狀況的組合顯示](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
+8. [五種狀況的組合顯示，使用思源黑體2.000β版](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
 
 -----
 
@@ -246,3 +247,6 @@
 - 8/13更新字體授權
 
 - 8/19更新字體規格
+
+- 9/27更新Case 8，使用Dr.Ken Lunde提供的思源黑體2.000測試版
+
