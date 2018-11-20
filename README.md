@@ -229,7 +229,7 @@
 5. [基字直排，注音置於基字右方（舊版）](https://bobbytung.github.io/Bopomofo_on_Web/case05/index.html)
 6. [基字直排，注音置於基字右方（使用`vert`的更新版）](https://bobbytung.github.io/Bopomofo_on_Web/case06/index.html)
 7. [五種狀況的組合顯示](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
-8. [五種狀況的組合顯示，使用思源黑體2.000β版](https://bobbytung.github.io/Bopomofo_on_Web/case07/index.html)
+8. [五種狀況的組合顯示，使用思源黑體2.000版](https://bobbytung.github.io/Bopomofo_on_Web/case08/index.html)
 
 -----
 
@@ -241,12 +241,13 @@
 
 ## 更新事項
 
-- 3/22更新字體
+- 2018/3/22更新字體
 詢問Adobe Dr.Ken Lunde，建議使用OpenType GPOS 'vert'，But提供新版字體，追加Case 6。
 
-- 8/13更新字體授權
+- 2018/8/13更新字體授權
 
-- 8/19更新字體規格
+- 2018/8/19更新字體規格
 
-- 9/27更新Case 8，使用Dr.Ken Lunde提供的思源黑體2.000測試版
+- 2018/9/27更新Case 8，使用Dr.Ken Lunde提供的思源黑體2.000測試版
 
+- 2018/11/20更新Case 8，CSS指定思源黑體2.000版，請於[這裡下載安裝/更新](https://github.com/adobe-fonts/source-han-sans/releases/download/2.000R/SourceHanSans.ttc)
