@@ -3,17 +3,15 @@
 <head>
 <meta charset="utf-8"></head>
 <style>
-@font-face {   
+@font-face { 
 	font-family: BopomofoRuby;
 	src: url(BopomofoRuby1909-v1-Regular.ttf);
 }
 
-.dummy { font-family: 'AR KaiB5', 'KaiTi TW', '標楷體'; font-size: 40px; line-height: 1.8; letter-spacing: 2px }
-.test { font-family: 'AR KaiB5', '標楷體'; font-size: 28px; line-height: 1.4; }
-.zy { display: block; font-family: BopomofoRuby; font-size: 12px; line-height: 1.8; white-space: nowrap; }
+.dummy {  font-size: 40px; line-height: 1.8; letter-spacing: 2px }
+/* font-family: '標楷體'; */
 
-.bpmf { font-family: BopomofoRuby; font-size: 36px; text-orientation: upright; }
-
+.dummy2 { font-family: BopomofoRuby, 'AR KaiB5', 'KaiTi TW', '標楷體'; font-size: 40px; line-height: 1.8; letter-spacing: 2px }
 ruby { padding-right: 2px;  }
 
 .h {
@@ -30,8 +28,8 @@ ruby { padding-right: 2px;  }
 	text-orientation: upright;
 }
  
-rt {
-	font-family: BopomofoRuby;
+.dummy2 rt { 	font-family: BopomofoRuby; }
+ rt {
     font-size: 26%;
     letter-spacing: 0;
     ruby-align: center;
@@ -39,96 +37,104 @@ rt {
     text-orientation: upright;
     letter-spacing: 0;
 }
-</style>
 
-<div class="dummy" style="float: left" lang="zh-tw">
+ h2 { background:#ccc; }
+ fieldset { width: 12em; }
+</style>
+<title>注音符號調號之數位排版</title>
+<h1>注音符號調號之數位排版</h1>
+
+　　注音符號，是臺灣特有的中文標音系統，做為漢字及方言用字(如閩南等)之標音使用，應用在國語教育上已有近百年的歷史。雖然教育部所公布的《國語注音符號手冊》已明確規定的國字標示注音時的書寫大小與方位指引。然而注音符號的文書排版從傳統教科書的活字印刷到電腦數位排版以來，未曾有過標準化的技術施行細則，在網頁上正確標示注音符號之調號則是另一個問題。<p>
+　　2013年W3C完成了HTML5的規格制定，當中對於中文注音符號的標注方式首次有了標準化（HTML Ruby Markup）的規定，且同時適用於國際標準EPUB 3電子書。此語法可以自由地於漢字側邊標示注音符號，並透過CSS設定橫豎排。隨著HTML5的普及，提供了在網頁上顯示中文注音的基礎解決方案。<p>
+　　然而，Ruby Markup語法僅著重於日文音標(平假/片假)的註解，規格中並未包含「注音符號特有的調號位置調整」，因此，仍需透過其他技術來修正調號位置。在針對傳統印刷應用，如課本、考卷的印刷上，尚能透過人工修改的方式處理；但在數位出版，以網頁、電子書、App的方式呈現時，注音符號就需要以標準化的數位規範來確保於不同平台載具間能夠呈現一致。<p>
+　　目前，注音符號與其調號，已於ISO 10646/Unicode碼中完成編碼定義，若使用當前主流的向量字型格式(OpenType)所具備的各項功能參數來定義注音符號調號調整之規範，便能使字型業者在造字當下支援本顯示規範，嘉惠一般使用者、出版(排版)業者以及印刷業者。<p>
+　　本研究旨在運用國際通行之開放字型標準：OpenType技術，完成數位排版之國語注音符號及方音注音符號的調號位置調整，以符合教育部所制定之注音符號排版顯示，並提供滿足國家推行國語基礎教育所必須的注音符號標示水平。<p>
+　　本計畫預計完成以Opentype字型技術進行注音符號調號位置調整以符合教育部之規範。以下範例為使用HTML ruby語法在網頁上橫排及直排之呈現：<p>
+
+
+
+<h2>範例一：國語橫排</h2>
+
+<fieldset class="dummy" style="float: left" lang="zh-tw">
+<legend>現況</legend>
 「<ruby>旅<rt>ㄌㄩˇ</rt></ruby><ruby>行<rt>ㄒㄧㄥˊ</rt></ruby><ruby>者<rt>ㄓㄜˇ</rt></ruby><ruby>一<rt>ㄧ</rt></ruby><ruby>號<rt>ㄏㄠˋ</rt></ruby>」<br>
 <ruby>各<rt>ㄍㄜˋ</rt></ruby><ruby>位<rt>ㄨㄟˋ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>好<rt>ㄏㄠˇ</rt></ruby><ruby>吧<rt>˙ㄅㄚ</rt></ruby>？<br>
 <ruby>我<rt>ㄨㄛˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>很<rt>ㄏㄣˇ</rt></ruby><ruby>想<rt>ㄒㄧㄤˇ</rt></ruby><ruby>念<rt>ㄋㄧㄢˋ</rt></ruby><ruby>你<rt>ㄋㄧˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby>。<br>
 <ruby>有<rt>ㄧㄡˇ</rt></ruby><ruby>空<rt>ㄎㄨㄥˋ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>玩<rt>ㄨㄢˊ</rt></ruby>。<br>
-<br>
+
+</fieldset>
+
+<fieldset class="dummy2 h" lang="zh-tw">
+<legend>本計劃成果</legend>
+「<ruby>旅<rt>ㄌㄩˇ</rt></ruby><ruby>行<rt>ㄒㄧㄥˊ</rt></ruby><ruby>者<rt>ㄓㄜˇ</rt></ruby><ruby>一<rt>ㄧ</rt></ruby><ruby>號<rt>ㄏㄠˋ</rt></ruby>」<br>
+<ruby>各<rt>ㄍㄜˋ</rt></ruby><ruby>位<rt>ㄨㄟˋ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>好<rt>ㄏㄠˇ</rt></ruby><ruby>吧<rt>˙ㄅㄚ</rt></ruby>？<br>
+<ruby>我<rt>ㄨㄛˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>很<rt>ㄏㄣˇ</rt></ruby><ruby>想<rt>ㄒㄧㄤˇ</rt></ruby><ruby>念<rt>ㄋㄧㄢˋ</rt></ruby><ruby>你<rt>ㄋㄧˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby>。<br>
+<ruby>有<rt>ㄧㄡˇ</rt></ruby><ruby>空<rt>ㄎㄨㄥˋ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>玩<rt>ㄨㄢˊ</rt></ruby>。<br>
+</fieldset>
+
+<h2>範例二：閩南語橫排</h2>
+<fieldset class="dummy" style="float: left">
+<legend>現況</legend>
+
 「<ruby>旅<rt>ㄌㄨˋ</rt></ruby><ruby>行<rt>ㄏㄧㄥˊ</rt></ruby><ruby>者<rt>ㄐㄧㄚˋ</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>號<rt>ㄏㄜ˫</rt></ruby>」<br>
 <ruby>太<rt>ㄊㄞ˪</rt></ruby><ruby>空<rt>ㄎㆲ</rt></ruby><ruby>朋<rt>ㄅㄧㄥˊ</rt></ruby><ruby>友<rt>ㄧㄨˋ</rt></ruby>，<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>好<rt>ㄏㄜˋ</rt></ruby>！<br>
 <ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>食<rt>ㄐㄧㄚㆷ˙</rt></ruby><ruby>飽<rt>ㄅㄚˋ</rt></ruby><ruby>未<rt>ㆠㆤ˫</rt></ruby>？<br>
 <ruby>有<rt>ㄨ˫</rt></ruby><ruby>閒<rt>ㄧㄥˊ</rt></ruby><ruby>就<rt>ㄉㄜ˫</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>阮<rt>ㆣㄨㄣ</rt></ruby><ruby>遮<rt>ㄐㄧㄚ</rt></ruby><ruby>坐<rt>ㄗㆤ˫</rt></ruby><ruby>喔<rt>ㄛ˙</rt></ruby>。<br>
-</div>
-<div class="dummy h">
-「<ruby>旅<rt>ㄌㄩˇ</rt></ruby><ruby>行<rt>ㄒㄧㄥˊ</rt></ruby><ruby>者<rt>ㄓㄜˇ</rt></ruby><ruby>一<rt>ㄧ</rt></ruby><ruby>號<rt>ㄏㄠˋ</rt></ruby>」<br>
-<ruby>各<rt>ㄍㄜˋ</rt></ruby><ruby>位<rt>ㄨㄟˋ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>好<rt>ㄏㄠˇ</rt></ruby><ruby>吧<rt>˙ㄅㄚ</rt></ruby>？<br>
-<ruby>我<rt>ㄨㄛˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>很<rt>ㄏㄣˇ</rt></ruby><ruby>想<rt>ㄒㄧㄤˇ</rt></ruby><ruby>念<rt>ㄋㄧㄢˋ</rt></ruby><ruby>你<rt>ㄋㄧˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby>。<br>
-<ruby>有<rt>ㄧㄡˇ</rt></ruby><ruby>空<rt>ㄎㄨㄥˋ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>玩<rt>ㄨㄢˊ</rt></ruby>。<br>
-<br>
+</fieldset>
+<fieldset class="dummy2 h">
+<legend>本計劃成果</legend>
 「<ruby>旅<rt>ㄌㄨˋ</rt></ruby><ruby>行<rt>ㄏㄧㄥˊ</rt></ruby><ruby>者<rt>ㄐㄧㄚˋ</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>號<rt>ㄏㄜ˫</rt></ruby>」<br>
 <ruby>太<rt>ㄊㄞ˪</rt></ruby><ruby>空<rt>ㄎㆲ</rt></ruby><ruby>朋<rt>ㄅㄧㄥˊ</rt></ruby><ruby>友<rt>ㄧㄨˋ</rt></ruby>，<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>好<rt>ㄏㄜˋ</rt></ruby>！<br>
 <ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>食<rt>ㄐㄧㄚㆷ˙</rt></ruby><ruby>飽<rt>ㄅㄚˋ</rt></ruby><ruby>未<rt>ㆠㆤ˫</rt></ruby>？<br>
 <ruby>有<rt>ㄨ˫</rt></ruby><ruby>閒<rt>ㄧㄥˊ</rt></ruby><ruby>就<rt>ㄉㄜ˫</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>阮<rt>ㆣㄨㄣ</rt></ruby><ruby>遮<rt>ㄐㄧㄚ</rt></ruby><ruby>坐<rt>ㄗㆤ˫</rt></ruby><ruby>喔<rt>ㆦ˙</rt></ruby>。<br>
-</div>
-<div class="dummy v" style="float: left">
-「<ruby>旅<rt>ㄌㄩˇ</rt></ruby><ruby>行<rt>ㄒㄧㄥˊ</rt></ruby><ruby>者<rt>ㄓㄜˇ</rt></ruby><ruby>一<rt>ㄧ</rt></ruby><ruby>號<rt>ㄏㄠˋ</rt></ruby>」<br>
-<ruby>各<rt>ㄍㄜˋ</rt></ruby><ruby>位<rt>ㄨㄟˋ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>好<rt>ㄏㄠˇ</rt></ruby><ruby>吧<rt>˙ㄅㄚ</rt></ruby>？<br>
-<ruby>我<rt>ㄨㄛˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>很<rt>ㄏㄣˇ</rt></ruby><ruby>想<rt>ㄒㄧㄤˇ</rt></ruby><ruby>念<rt>ㄋㄧㄢˋ</rt></ruby><ruby>你<rt>ㄋㄧˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby>。<br>
-<ruby>有<rt>ㄧㄡˇ</rt></ruby><ruby>空<rt>ㄎㄨㄥˋ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>玩<rt>ㄨㄢˊ</rt></ruby>。<br>
-<br>
-「<ruby>旅<rt>ㄌㄨˋ</rt></ruby><ruby>行<rt>ㄏㄧㄥˊ</rt></ruby><ruby>者<rt>ㄐㄧㄚˋ</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>號<rt>ㄏㄜ˫</rt></ruby>」<br>
-<ruby>太<rt>ㄊㄞ˪</rt></ruby><ruby>空<rt>ㄎㆲ</rt></ruby><ruby>朋<rt>ㄅㄧㄥˊ</rt></ruby><ruby>友<rt>ㄧㄨˋ</rt></ruby>，<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>好<rt>ㄏㄜˋ</rt></ruby>！<br>
-<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>食<rt>ㄐㄧㄚㆷ˙</rt></ruby><ruby>飽<rt>ㄅㄚˋ</rt></ruby><ruby>未<rt>ㆠㆤ˫</rt></ruby>？<br>
-<ruby>有<rt>ㄨ˫</rt></ruby><ruby>閒<rt>ㄧㄥˊ</rt></ruby><ruby>就<rt>ㄉㄜ˫</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>阮<rt>ㆣㄨㄣ</rt></ruby><ruby>遮<rt>ㄐㄧㄚ</rt></ruby><ruby>坐<rt>ㄗㆤ˫</rt></ruby><ruby>喔<rt>ㆦ˙</rt></ruby>。<br>
-</div>
-<br>  
-<br style="clear:both"><br><br>
+</fieldset>
 
-<div class="test" style="float:left">
-<span class="zy">ㄌㄧㄢˊ ㄏㄜˊ ㄍㄨㄛˊ ㄕˋ ㄐㄧㄝˋ ㄖㄣˊ ㄑㄩㄢˊ ㄧㄢˊ</span>
-<span class="zy">ㄌㄧㄢˊ ㄏㄚㆴ˙ ㄍㆦㆶ ㄙㆤ˪ ㄍㄞ˪ ㆢㄧㄣˊ ㄎㄨㄢˊ ㄙㄨㄢ ㆣㄧㄢˊ</span>
-聯合國世界人權宣言
-<span class="zy">ㄉㆤ˫ ㄧㆵ ㄉㄧㄠˊ</span>
-第一條
-<span class="zy">ㄌㄢˋ ㄌㄤˊ ㄙㆥ ㄌㄞˊ ㄗㄨ˫ ㄧㄨˊ</span>
-咱儂生來自由，
-<span class="zy">ㄉㄧ˫ ㄗㄨㄣ ㆣㄧㆰˊ ㄒㄧㆲ˫ ㄧㆵ ㄌㄨㆵ˙ ㄅㄧㄥˊ ㄉㄧㄥˋ</span>
-佇尊嚴上一律平等，
-<span class="zy">ㄌㄢˋ ㄌㄤˊ ㄨ˫ ㄌㄧˋ ㄒㄧㄥ˪ ㄍㄚㆷ ㄌㄧㆲˊ ㄒㄧㆬ</span>
-咱儂有理性佮良心，
-<span class="zy">ㆢㄧˊ ㄑㄧㆩˋ ㄧㄥˋ ㄍㄞ ㄧˋ ㄏㄧㆩ ㄉㄧ˫ ㄍㄨㄢ ㄏㆤ˫ ㆤˊ ㄐㄧㄥ ㄒㄧㄣˊ</span>
-而且應該以兄弟關係的精神
-<span class="zy">ㄌㄞˊ ㄏㆦ˫ ㄒㄧㆲ ㄉㄨㄧ˪ ㄊㄞ˫</span>
-來互相對待。
-</div>
-<br>
-<div class="test h" style="float:left">
-<span class="zy">ㄌㄧㄢˊ ㄏㄜˊ ㄍㄨㄛˊ ㄕˋ ㄐㄧㄝˋ ㄖㄣˊ ㄑㄩㄢˊ ㄧㄢˊ</span>
-<span class="zy">ㄌㄧㄢˊ ㄏㄚㆴ˙ ㄍㆦㆶ ㄙㆤ˪ ㄍㄞ˪ ㆢㄧㄣˊ ㄎㄨㄢˊ ㄙㄨㄢ ㆣㄧㄢˊ</span>
-聯合國世界人權宣言
-<span class="zy">ㄉㆤ˫ ㄧㆵ ㄉㄧㄠˊ</span>
-第一條
-<span class="zy">ㄌㄢˋ ㄌㄤˊ ㄙㆥ ㄌㄞˊ ㄗㄨ˫ ㄧㄨˊ</span>
-咱儂生來自由，
-<span class="zy">ㄉㄧ˫ ㄗㄨㄣ ㆣㄧㆰˊ ㄒㄧㆲ˫ ㄧㆵ ㄌㄨㆵ˙ ㄅㄧㄥˊ ㄉㄧㄥˋ</span>
-佇尊嚴上一律平等，
-<span class="zy">ㄌㄢˋ ㄌㄤˊ ㄨ˫ ㄌㄧˋ ㄒㄧㄥ˪ ㄍㄚㆷ ㄌㄧㆲˊ ㄒㄧㆬ</span>
-咱儂有理性佮良心，
-<span class="zy">ㆢㄧˊ ㄑㄧㆩˋ ㄧㄥˋ ㄍㄞ ㄧˋ ㄏㄧㆩ ㄉㄧ˫ ㄍㄨㄢ ㄏㆤ˫ ㆤˊ ㄐㄧㄥ ㄒㄧㄣˊ</span>
-而且應該以兄弟關係的精神
-<span class="zy">ㄌㄞˊ ㄏㆦ˫ ㄒㄧㆲ ㄉㄨㄧ˪ ㄊㄞ˫</span>
-來互相對待。
-</div>
-<div class="test v" style="float:left">
-<span class="zy">ㄌㄧㄢˊ ㄏㄜˊ ㄍㄨㄛˊ ㄕˋ ㄐㄧㄝˋ ㄖㄣˊ ㄑㄩㄢˊ ㄧㄢˊ</span>
-<span class="zy">ㄌㄧㄢˊ ㄏㄚㆴ˙ ㄍㆦㆶ ㄙㆤ˪ ㄍㄞ˪ ㆢㄧㄣˊ ㄎㄨㄢˊ ㄙㄨㄢ ㆣㄧㄢˊ</span>
-聯合國世界人權宣言
-<span class="zy">ㄉㆤ˫ ㄧㆵ ㄉㄧㄠˊ</span>
-第一條
-<span class="zy">ㄌㄢˋ ㄌㄤˊ ㄙㆥ ㄌㄞˊ ㄗㄨ˫ ㄧㄨˊ</span>
-咱儂生來自由，
-<span class="zy">ㄉㄧ˫ ㄗㄨㄣ ㆣㄧㆰˊ ㄒㄧㆲ˫ ㄧㆵ ㄌㄨㆵ˙ ㄅㄧㄥˊ ㄉㄧㄥˋ</span>
-佇尊嚴上一律平等，
-<span class="zy">ㄌㄢˋ ㄌㄤˊ ㄨ˫ ㄌㄧˋ ㄒㄧㄥ˪ ㄍㄚㆷ ㄌㄧㆲˊ ㄒㄧㆬ</span>
-咱儂有理性佮良心，
-<span class="zy">ㆢㄧˊ ㄑㄧㆩˋ ㄧㄥˋ ㄍㄞ ㄧˋ ㄏㄧㆩ ㄉㄧ˫ ㄍㄨㄢ ㄏㆤ˫ ㆤˊ ㄐㄧㄥ ㄒㄧㄣˊ</span>
-而且應該以兄弟關係的精神
-<span class="zy">ㄌㄞˊ ㄏㆦ˫ ㄒㄧㆲ ㄉㄨㄧ˪ ㄊㄞ˫</span>
-來互相對待。
-</div>
+<h2>範例三：國語直排</h2>
+
+<fieldset class="dummy v" style="float: left">
+<legend>現況</legend>
+「<ruby>旅<rt>ㄌㄩˇ</rt></ruby><ruby>行<rt>ㄒㄧㄥˊ</rt></ruby><ruby>者<rt>ㄓㄜˇ</rt></ruby><ruby>一<rt>ㄧ</rt></ruby><ruby>號<rt>ㄏㄠˋ</rt></ruby>」<br>
+<ruby>各<rt>ㄍㄜˋ</rt></ruby><ruby>位<rt>ㄨㄟˋ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>好<rt>ㄏㄠˇ</rt></ruby><ruby>吧<rt>˙ㄅㄚ</rt></ruby>？<br>
+<ruby>我<rt>ㄨㄛˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>很<rt>ㄏㄣˇ</rt></ruby><ruby>想<rt>ㄒㄧㄤˇ</rt></ruby><ruby>念<rt>ㄋㄧㄢˋ</rt></ruby><ruby>你<rt>ㄋㄧˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby>。<br>
+<ruby>有<rt>ㄧㄡˇ</rt></ruby><ruby>空<rt>ㄎㄨㄥˋ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>玩<rt>ㄨㄢˊ</rt></ruby>。<br>
+</fieldset>
+
+<fieldset class="dummy2 v">
+<legend>本計劃成果</legend>
+「<ruby>旅<rt>ㄌㄩˇ</rt></ruby><ruby>行<rt>ㄒㄧㄥˊ</rt></ruby><ruby>者<rt>ㄓㄜˇ</rt></ruby><ruby>一<rt>ㄧ</rt></ruby><ruby>號<rt>ㄏㄠˋ</rt></ruby>」<br>
+<ruby>各<rt>ㄍㄜˋ</rt></ruby><ruby>位<rt>ㄨㄟˋ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>好<rt>ㄏㄠˇ</rt></ruby><ruby>吧<rt>˙ㄅㄚ</rt></ruby>？<br>
+<ruby>我<rt>ㄨㄛˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby><ruby>都<rt>ㄉㄡ</rt></ruby><ruby>很<rt>ㄏㄣˇ</rt></ruby><ruby>想<rt>ㄒㄧㄤˇ</rt></ruby><ruby>念<rt>ㄋㄧㄢˋ</rt></ruby><ruby>你<rt>ㄋㄧˇ</rt></ruby><ruby>們<rt>˙ㄇㄣ</rt></ruby>。<br>
+<ruby>有<rt>ㄧㄡˇ</rt></ruby><ruby>空<rt>ㄎㄨㄥˋ</rt></ruby><ruby>就<rt>ㄐㄧㄡˋ</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>玩<rt>ㄨㄢˊ</rt></ruby>。<br>
+</fieldset>
+
+<h2>範例四：閩南語直排</h2>
+
+
+<fieldset class="dummy v " style="float: left">
+<legend>現況</legend>
+「<ruby>旅<rt>ㄌㄨˋ</rt></ruby><ruby>行<rt>ㄏㄧㄥˊ</rt></ruby><ruby>者<rt>ㄐㄧㄚˋ</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>號<rt>ㄏㄜ˫</rt></ruby>」<br>
+<ruby>太<rt>ㄊㄞ˪</rt></ruby><ruby>空<rt>ㄎㆲ</rt></ruby><ruby>朋<rt>ㄅㄧㄥˊ</rt></ruby><ruby>友<rt>ㄧㄨˋ</rt></ruby>，<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>好<rt>ㄏㄜˋ</rt></ruby>！<br>
+<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>食<rt>ㄐㄧㄚㆷ˙</rt></ruby><ruby>飽<rt>ㄅㄚˋ</rt></ruby><ruby>未<rt>ㆠㆤ˫</rt></ruby>？<br>
+<ruby>有<rt>ㄨ˫</rt></ruby><ruby>閒<rt>ㄧㄥˊ</rt></ruby><ruby>就<rt>ㄉㄜ˫</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>阮<rt>ㆣㄨㄣ</rt></ruby><ruby>遮<rt>ㄐㄧㄚ</rt></ruby><ruby>坐<rt>ㄗㆤ˫</rt></ruby><ruby>喔<rt>ㆦ˙</rt></ruby>。<br>
+</fieldset>
+
+
+<fieldset class="dummy2 v">
+<legend>本計劃成果</legend>
+「<ruby>旅<rt>ㄌㄨˋ</rt></ruby><ruby>行<rt>ㄏㄧㄥˊ</rt></ruby><ruby>者<rt>ㄐㄧㄚˋ</rt></ruby><ruby>一<rt>ㄧㆵ</rt></ruby><ruby>號<rt>ㄏㄜ˫</rt></ruby>」<br>
+<ruby>太<rt>ㄊㄞ˪</rt></ruby><ruby>空<rt>ㄎㆲ</rt></ruby><ruby>朋<rt>ㄅㄧㄥˊ</rt></ruby><ruby>友<rt>ㄧㄨˋ</rt></ruby>，<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>好<rt>ㄏㄜˋ</rt></ruby>！<br>
+<ruby>恁<rt>ㄌㄧㄣˋ</rt></ruby><ruby>食<rt>ㄐㄧㄚㆷ˙</rt></ruby><ruby>飽<rt>ㄅㄚˋ</rt></ruby><ruby>未<rt>ㆠㆤ˫</rt></ruby>？<br>
+<ruby>有<rt>ㄨ˫</rt></ruby><ruby>閒<rt>ㄧㄥˊ</rt></ruby><ruby>就<rt>ㄉㄜ˫</rt></ruby><ruby>來<rt>ㄌㄞˊ</rt></ruby><ruby>阮<rt>ㆣㄨㄣ</rt></ruby><ruby>遮<rt>ㄐㄧㄚ</rt></ruby><ruby>坐<rt>ㄗㆤ˫</rt></ruby><ruby>喔<rt>ㆦ˙</rt></ruby>。<br>
+</fieldset>
+<hr/>
+<ul>
+<li>本計畫標準文件下載 (標檢局審定中)</li>
+<li>範例字型下載</li>
+<li>HTML ruby語法與CSS說明範例</li>
+</ul>
+
+
+
 
 
 </html>
