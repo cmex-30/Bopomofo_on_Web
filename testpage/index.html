@@ -170,8 +170,33 @@ p {margin: 0; font-size: 14pt;line-height: 1.7; text-align: justify; text-indent
 <li>本計畫標準文件下載 (標檢局審定中)</li>
 	<li>範例字型<a href="https://cmex-30.github.io/Bopomofo_on_Web/font/BopomofoPro-Regular.otf">下載</a></li>
 <li>HTML ruby語法與CSS說明範例<br/>
-	<textarea><ruby>國字<rt>注音</rt></ruby></textarea>	
-	</li>
+	<textarea cols=30 rows=10>
+<style>
+/* 橫書 */
+.h 
+{
+ font-variant-east-asian: salt;
+ -moz-font-feature-settings: "salt";
+ -webkit-font-feature-settings: "salt";
+ font-feature-settings: "salt";
+}
+
+/* 直書 */
+.v 
+{
+ writing-mode: vertical-rl;
+ -webkit-writing-mode: vertical-rl;
+ -moz-writing-mode: vertical-rl;
+ text-orientation: upright;
+}
+</style>
+		
+<ruby class="h">國字橫書<rt>注音</rt></ruby>
+
+<ruby class="v">國字直書<rt>注音</rt></ruby>
+        
+</textarea>	
+</li>
 </ul>
 
 
