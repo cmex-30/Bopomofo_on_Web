@@ -170,8 +170,11 @@ p {margin: 0; font-size: 14pt;line-height: 1.7; text-align: justify; text-indent
 <li>本計畫標準文件下載 (標檢局審定中)</li>
 	<li>範例字型<a href="https://cmex-30.github.io/Bopomofo_on_Web/font/BopomofoPro-Regular.otf">下載</a></li>
 <li>HTML ruby語法與CSS說明範例<br/>
-	<textarea cols=60 rows=10>
-<style>
+<textarea cols=60 rows=10>
+<style>	
+@font-face { font-family: BopomofoRuby; src: url(BopomofoRuby1909-v1-Regular.ttf);}
+.h rt, .v rt { 	font-family: BopomofoRuby; }
+	
 /* 橫書 */
 .h 
 {
