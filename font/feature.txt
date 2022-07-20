@@ -1,0 +1,104 @@
+table OS/2 {
+	TypoAscender 901;
+	TypoDescender -123;
+	TypoLineGap 205;
+	winAscent 1106;
+	winDescent 123;
+	WeightClass 400;
+	WidthClass 5;
+	WidthClass 5;
+	FSType 8;
+	XHeight 512;
+	CapHeight 717;
+	Panose 2 1 8 0 0 0 0 0 0 0;
+	UnicodeRange 0 5 34 51;
+	CodePageRange 1252 950;
+} OS/2;
+
+table hhea {
+	CaretOffset 0;
+	Ascender 1106;
+	Descender -123;
+	LineGap 0;
+} hhea;
+
+table head { 
+	FontRevision 001.200;
+} head;
+
+table name {
+	nameid 0 1 "Copyright \A9 2018 by But Ko. Open Font under Terms of following OFL (Open Font License).";
+	nameid 0 3 1 1033 "Copyright \00A9 2018 by But Ko. Open Font under Terms of following OFL (Open Font License).";
+	nameid 1 1 "BopomofoPro";
+	nameid 1 3 1 1033 "BopomofoPro";
+	nameid 2 1 "Regular";
+	nameid 2 3 1 1033 "Regular";
+	nameid 4 1 "BopomofoPro Regular";
+	nameid 4 3 1 1033 "BopomofoPro Regular";
+	nameid 5 1 "Version 1.200";
+	nameid 5 3 1 1033 "Version 1.200";
+	nameid 9 1 "But Ko";
+	nameid 9 3 1 1033 "But Ko";
+	nameid 11 1 "https://github.com/cmex-30/Bopomofo_on_Web";
+	nameid 11 3 1 1033 "https://github.com/cmex-30/Bopomofo_on_Web";
+	nameid 12 1 "https://github.com/cmex-30/Bopomofo_on_Web";
+	nameid 12 3 1 1033 "https://github.com/cmex-30/Bopomofo_on_Web";
+	nameid 13 1 "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL";
+	nameid 13 3 1 1033 "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL";
+	nameid 14 1 "http://scripts.sil.org/OFL";
+	nameid 14 3 1 1033 "http://scripts.sil.org/OFL";
+} name;
+
+table vmtx {
+	VertAdvanceY uni02D9.vert 500;
+} vmtx;
+
+@YunMu = [uni3113 uni3114 uni3115 uni3116 uni3117 uni3118 uni3119 uni311A uni311B uni311C uni311D uni311E uni311F uni3120 uni3121 uni3122 uni3123 uni3124 uni3125 uni3126 uni3127 uni3128 uni3129 uni312D uni312E uni312F uni31A4 uni31A5 uni31A6 uni31A7 uni31A8 uni31A9 uni31AA uni31AB uni31AC uni31AD uni31AE uni31AF uni31B0 uni31B1 uni31B2 uni31B3];
+@ToneSpacing = [uni02CA uni02C7 uni02CB];
+@ToneComb = [uni0301 uni030C uni0300];
+@MarkComb = [uni0301 uni030C uni0300 uni02EA uni02EB];
+@bdgh = [uni31B4 uni31B5 uni31B7 uni31BB];
+@YongJip = [uni0307];
+@Yi = [uni3127];
+
+languagesystem DFLT dflt;
+languagesystem hani dflt;
+languagesystem latn dflt;
+markClass @MarkComb <anchor 0 0> @MarkComb_Anchor;
+markClass @YongJip <anchor 0 0> @YongJip_Anchor;
+
+lookup Jip_Comb {
+	pos base @YunMu <anchor 960 0> mark @YongJip_Anchor;
+	pos base @bdgh <anchor 0 0> mark @YongJip_Anchor;
+} Jip_Comb;
+
+feature mark {
+	pos base @YunMu <anchor 640 600> mark @MarkComb_Anchor;
+	lookup Jip_Comb;
+} mark ;
+
+feature ruby {
+	sub @ToneSpacing by @ToneComb;
+} ruby ;
+
+feature aalt {
+	feature ruby;
+	feature vert;
+} aalt ;
+
+feature vert {
+	sub uni02D9 by uni02D9.vert;
+	sub @ToneSpacing by @ToneComb;
+
+	pos @Yi <0 60 0 -200>;
+	pos @bdgh <800 1000 0 -1000>;
+	pos base @YunMu <anchor 960 360> mark @MarkComb_Anchor;
+} vert ;
+
+
+table GDEF {
+ GlyphClassDef ,# Base 
+ , # Liga 
+ [uni0307 uni0300 uni0301 uni030C], # Mark 
+ ;
+} GDEF;
