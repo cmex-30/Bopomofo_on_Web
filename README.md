@@ -7,11 +7,11 @@ In this repo we provide a [detailed document](https://github.com/cmex-30/Bopomof
 2. Code points designated to use for input method.
 3. Code points sequence for each tone marks.
 4. OpenType features we want to use for Bopomofo layout.
-5. Sample font for font features.
+5. Sample font that use features and GSUB function for layout adjestment.
 
 In this document, we use registered OpenType feature and applied GSUB way that is working on modern font engine like HarfBuzz and CoreText. So that the sample font is immediately usable for web content that is well-marked with ruby tag with correct code points sequence.
 
-Feel Free to use the font under Open Font License. If you have any suggestion and feedback, please add issue in this repo.
+Feel Free to use [the font](https://github.com/cmex-30/Bopomofo_on_Web/tree/master/font) under Open Font License. If you have any suggestion and feedback, please add issue in this repo.
 Glad to know your usage on Web content and applications, please let me know: [bobbytung](mailto:bobbytung@wanderer,tw).
 
 -----
