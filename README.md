@@ -1,3 +1,21 @@
+# Bopomofo Layout with OpenType features
+
+For English readers, If you are i18n Engineer, Input Method developer, and Font Engineer.
+In this repo we provide a [detailed document](https://github.com/cmex-30/Bopomofo_on_Web/blob/master/BOPOMOFO%20TYPOGRAPHY.pdf) as a reference included:
+
+1. Bopomofo and Bopomofo extension(for Taiwanese and Hakka) layout samples.
+2. Code points designated to use for input method.
+3. Code points sequence for each tone marks.
+4. OpenType features we want to use for Bopomofo layout.
+5. Sample font for font features.
+
+In this document, we use registered OpenType feature and applied GSUB way that is working on modern font engine like HarfBuzz and CoreText. So that the sample font is immediately usable for web content that is well-marked with ruby tag with correct code points sequence.
+
+Feel Free to use the font under Open Font License. If you have any suggestion and feedback, please add issue in this repo.
+Glad to know your usage on Web content and applications, please let me know: [bobbytung](mailto:bobbytung@wanderer,tw).
+
+-----
+
 # 注音符號數位化顯示計畫
 
 本計畫主要目的是：尋求讓中文注音符號，在Web以及其他數位環境下，能以更符合數位化需求的方式呈現的方法。
