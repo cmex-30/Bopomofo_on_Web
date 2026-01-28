@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+<meta charset="utf-8"></head>
+<style>
+@font-face { 
+	font-family: BopomofoRuby;
+	src: url(BopomofoRuby1909-v1-Regular.ttf);
+}
+
+.dummy {  font-size: 40px; line-height: 1.8; letter-spacing: 2px }
+/* font-family: '標楷體'; */
+
+.dummy2 { font-family: "KaiTi TC", "BiauKai", "標楷體"; font-size: 40px; line-height: 1.8; letter-spacing: 2px }
+
+.inter {ruby-position: inter-character;}
+
+.dummy2 rt {font-family: BopomofoRuby;}
+
+ruby { padding-right: 2px;  }
+
+.h {
+  font-variant-east-asian: salt;
+  -moz-font-feature-settings: "salt";
+  -webkit-font-feature-settings: "salt";
+  font-feature-settings: "salt";
+}
+
+.v {
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+ 
+.dummy2 rt { 	font-family: BopomofoRuby; }
+
+rt {
+    font-size: 26%;
+    letter-spacing: 0;
+    ruby-align: center;
+    text-align: center;	/* chrome */
+    text-orientation: upright;
+    letter-spacing: 0;
+}
+
+h2 { background:#ccc; }
+ 
+fieldset { width: 12em; }
+
+h1 {text-align: center; font-size: 2rem;}
+
+h1 rt {font-family: BopomofoRuby;}
+ 
+p {margin: 0; font-size: 14pt;line-height: 1.7; text-align: justify; text-indent: 2rem;}
+
+.body {
+	 column-count: 2;
+	 column-gap: 3rem; 
+	 column-rule: solid black 1px;
+	 max-width: 49rem; margin-left: auto;margin-right: auto;
+}
+
+@media only screen and (max-width:48em) { 
+	.body {max-width: 23rem;
+		column-count: 1;
+	}
+	p {margin-bottom: 1rem; text-indent: 0;}
+}
+ h2 { background:#ccc; }
+ fieldset { width: 12em; display:inline-block; vertical-align:top; }
+</style>
+<title>注音符號調號之數位排版</title>
+<body>
+
+
+
+<fieldset class="dummy2 h" lang="zh-tw">
+<legend>台語橫排</legend>
+「<ruby>日<rt>ㄌㄧ</rt></ruby><ruby>花<rt>ㄏㄨㆤ</rt></ruby><ruby>閃<rt>ㄒㄧㆰˋ</rt></ruby><ruby>爍<rt>ㄒㄧㆷ</rt></ruby>」
+</fieldset>
+
+
+<fieldset class="dummy2 v">
+  <legend>台語直排</legend>
+「<ruby>日<rt>ㄌㄧㆵ˙</rt></ruby><ruby>花<rt>ㄏㄨㆤ</rt></ruby><ruby>閃<rt>ㄒㄧㆰˋ</rt></ruby><ruby>爍<rt>ㄒㄧㆷ</rt></ruby>」
+</fieldset>
+
+
+
+
+</body>
+</html>
